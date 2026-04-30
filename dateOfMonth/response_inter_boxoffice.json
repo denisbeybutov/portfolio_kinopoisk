@@ -1,0 +1,33 @@
+{
+  "total": 4,
+  "items": [
+    {
+      "type": "BUDGET",
+      "amount": 165000000,
+      "currencyCode": "USD",
+      "name": "US Dollar",
+      "symbol": "$"
+    },
+    {
+      "type": "RUS",
+      "amount": 26192066,
+      "currencyCode": "USD",
+      "name": "US Dollar",
+      "symbol": "$"
+    },
+    {
+      "type": "USA",
+      "amount": 203227580,
+      "currencyCode": "USD",
+      "name": "US Dollar",
+      "symbol": "$"
+    },
+    {
+      "type": "WORLD",
+      "amount": 773889028,
+      "currencyCode": "USD",
+      "name": "US Dollar",
+      "symbol": "$"
+    }
+  ]
+}

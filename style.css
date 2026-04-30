@@ -12,11 +12,11 @@
 }
 
 :root {
-    --bg-color: #ffffff;
-    --text-color: #333;
+    --bg-color: #3a3939;
+    --text-color: #ebebeb;
     --accent-color: #2ba7dc;
     --second-text-color: #a5a5b1;
-    --third-text-color: #fff;
+    --third-text-color: #cdcdcd;
     --error-color: #ea003d;
 }
 
@@ -84,12 +84,13 @@ img{
 }
 
 .app__pagination-link {
-    font-size: 20px;
+    font-size: 16px;
     color: var(--text-color);
     transition: color 0.3s ease-in-out;
     outline: none;
     padding: 15px;
     display: flex;
+
 }
 
 .app__pagination-link:focus-visible {
@@ -182,7 +183,8 @@ img{
     display: flex;    
     flex-direction: column;
     align-items: center;
-    
+    cursor: pointer;
+    overflow-y: auto;
 }
 
 .modal__button {
@@ -220,6 +222,11 @@ img{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    height: auto;
+}
+
+.modal__rating-kinopoisk {
+    display: flex;
 }
 
 .modal__picture{
@@ -236,11 +243,37 @@ img{
     height: 35px;
     border-radius: 10px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
 .hidden {
     display: none;
+}
+
+.input {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.input__label {
+    color: var(--text-color);
+}
+
+.input__inp {
+    background-color: rgb(255, 255, 255,.2);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.input__inp:hover {
+    background-color: rgb(255, 255, 255,.2);
 }
 
 @media (max-width: 1280px) {
@@ -259,6 +292,16 @@ img{
         gap: 20px;
     }
 
+    .modal__header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal__picture {
+        height:600px;
+        width: 100%;
+    }
+    
     
 }
 @media (max-width: 550px) {

@@ -1,0 +1,1206 @@
+{
+  "total": 51,
+  "items": [
+    {
+      "kinopoiskId": 843384,
+      "nameRu": "Кармен",
+      "nameEn": "Carmen",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/843384.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/843384.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мелодрама"
+        }
+      ],
+      "duration": 218,
+      "premiereRu": "2014-11-01"
+    },
+    {
+      "kinopoiskId": 843429,
+      "nameRu": "David Bowie это…",
+      "nameEn": "David Bowie Is",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/843429.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/843429.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        }
+      ],
+      "duration": 100,
+      "premiereRu": "2014-11-03"
+    },
+    {
+      "kinopoiskId": 843270,
+      "nameRu": "Матисс",
+      "nameEn": "Matisse Live",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/843270.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/843270.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        }
+      ],
+      "duration": 90,
+      "premiereRu": "2014-11-04"
+    },
+    {
+      "kinopoiskId": 258687,
+      "nameRu": "Интерстеллар",
+      "nameEn": "Interstellar",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/258687.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/258687.jpg",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Великобритания"
+        },
+        {
+          "country": "Канада"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "приключения"
+        }
+      ],
+      "duration": 169,
+      "premiereRu": "2014-11-06"
+    },
+    {
+      "kinopoiskId": 630602,
+      "nameRu": "Детка",
+      "nameEn": "Laggies",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/630602.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/630602.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мелодрама"
+        }
+      ],
+      "duration": 99,
+      "premiereRu": "2014-11-06"
+    },
+    {
+      "kinopoiskId": 566311,
+      "nameRu": "Экстрасенс 2: Лабиринты разума",
+      "nameEn": "Mindscape",
+      "year": 2013,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/566311.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/566311.jpg",
+      "countries": [
+        {
+          "country": "Испания"
+        },
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "duration": 99,
+      "premiereRu": "2014-11-06"
+    },
+    {
+      "kinopoiskId": 839833,
+      "nameRu": "З/Л/О: Новый вирус",
+      "nameEn": "V/H/S Viral",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/839833.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/839833.jpg",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Испания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "ужасы"
+        }
+      ],
+      "duration": 81,
+      "premiereRu": "2014-11-06"
+    },
+    {
+      "kinopoiskId": 837504,
+      "nameRu": "Махни крылом",
+      "nameEn": "Gus - Petit oiseau, grand voyage",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/837504.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/837504.jpg",
+      "countries": [
+        {
+          "country": "Франция"
+        },
+        {
+          "country": "Бельгия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "приключения"
+        }
+      ],
+      "duration": 90,
+      "premiereRu": "2014-11-06"
+    },
+    {
+      "kinopoiskId": 549676,
+      "nameRu": "Амазония: Инструкция по выживанию",
+      "nameEn": "Amazonia",
+      "year": 2013,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/549676.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/549676.jpg",
+      "countries": [
+        {
+          "country": "Франция"
+        },
+        {
+          "country": "Бразилия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        },
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "семейный"
+        }
+      ],
+      "duration": 82,
+      "premiereRu": "2014-11-06"
+    },
+    {
+      "kinopoiskId": 468312,
+      "nameRu": "Чебурашка",
+      "nameEn": "",
+      "year": 2009,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/468312.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/468312.jpg",
+      "countries": [
+        {
+          "country": "Япония"
+        },
+        {
+          "country": "Россия"
+        },
+        {
+          "country": "Корея Южная"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "детский"
+        }
+      ],
+      "duration": 80,
+      "premiereRu": "2014-11-06"
+    },
+    {
+      "kinopoiskId": 666938,
+      "nameRu": "Как украсть бриллиант",
+      "nameEn": "The Love Punch",
+      "year": 2013,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/666938.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/666938.jpg",
+      "countries": [
+        {
+          "country": "Франция"
+        },
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 94,
+      "premiereRu": "2014-11-06"
+    },
+    {
+      "kinopoiskId": 681683,
+      "nameRu": "Прощай, речь",
+      "nameEn": "Adieu au langage",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/681683.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/681683.jpg",
+      "countries": [
+        {
+          "country": "Швейцария"
+        },
+        {
+          "country": "Франция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фэнтези"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "duration": 70,
+      "premiereRu": "2014-11-06"
+    },
+    {
+      "kinopoiskId": 691556,
+      "nameRu": "Duran Duran: Вне сцены",
+      "nameEn": "Duran Duran: Unstaged",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/691556.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/691556.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "концерт"
+        }
+      ],
+      "duration": 121,
+      "premiereRu": "2014-11-06"
+    },
+    {
+      "kinopoiskId": 682366,
+      "nameRu": "Моё лето пинг-понга",
+      "nameEn": "Ping Pong Summer",
+      "year": 2013,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/682366.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/682366.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "duration": 91,
+      "premiereRu": "2014-11-06"
+    },
+    {
+      "kinopoiskId": 842451,
+      "nameRu": "Здорово и вечно",
+      "nameEn": "",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/842451.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/842451.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        }
+      ],
+      "duration": 78,
+      "premiereRu": "2014-11-08"
+    },
+    {
+      "kinopoiskId": 843380,
+      "nameRu": "Свадьба Фигаро",
+      "nameEn": "Le Nozze di Figaro",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/843380.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/843380.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [],
+      "duration": 332,
+      "premiereRu": "2014-11-08"
+    },
+    {
+      "kinopoiskId": 843557,
+      "nameRu": "Манон",
+      "nameEn": "Manon",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/843557.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/843557.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "duration": 170,
+      "premiereRu": "2014-11-11"
+    },
+    {
+      "kinopoiskId": 798117,
+      "nameRu": "Глобус: Двенадцатая ночь",
+      "nameEn": "Twelfth Night",
+      "year": 2012,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/798117.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/798117.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 186,
+      "premiereRu": "2014-11-12"
+    },
+    {
+      "kinopoiskId": 843289,
+      "nameRu": "Глобус: Сон в летнюю ночь",
+      "nameEn": "Shakespeare's Globe: A Midsummer Night's Dream",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/843289.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/843289.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 177,
+      "premiereRu": "2014-11-12"
+    },
+    {
+      "kinopoiskId": 512784,
+      "nameRu": "С любовью, Рози",
+      "nameEn": "Love, Rosie",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/512784.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/512784.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        },
+        {
+          "country": "Германия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 102,
+      "premiereRu": "2014-11-13"
+    },
+    {
+      "kinopoiskId": 596362,
+      "nameRu": "Лучшее во мне",
+      "nameEn": "The Best of Me",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/596362.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/596362.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        }
+      ],
+      "duration": 118,
+      "premiereRu": "2014-11-13"
+    },
+    {
+      "kinopoiskId": 839219,
+      "nameRu": "Мамочка",
+      "nameEn": "Mommy",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/839219.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/839219.jpg",
+      "countries": [
+        {
+          "country": "Канада"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "duration": 138,
+      "premiereRu": "2014-11-13"
+    },
+    {
+      "kinopoiskId": 462398,
+      "nameRu": "Уиджи: Доска Дьявола",
+      "nameEn": "Ouija",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/462398.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/462398.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "ужасы"
+        }
+      ],
+      "duration": 89,
+      "premiereRu": "2014-11-13"
+    },
+    {
+      "kinopoiskId": 739423,
+      "nameRu": "Спасение",
+      "nameEn": "The Salvation",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/739423.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/739423.jpg",
+      "countries": [
+        {
+          "country": "Дания"
+        },
+        {
+          "country": "Великобритания"
+        },
+        {
+          "country": "ЮАР"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "duration": 92,
+      "premiereRu": "2014-11-13"
+    },
+    {
+      "kinopoiskId": 798116,
+      "nameRu": "Новая подружка",
+      "nameEn": "Une nouvelle amie",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/798116.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/798116.jpg",
+      "countries": [
+        {
+          "country": "Франция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 108,
+      "premiereRu": "2014-11-13"
+    },
+    {
+      "kinopoiskId": 810248,
+      "nameRu": "День дурака",
+      "nameEn": "",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/810248.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/810248.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "приключения"
+        }
+      ],
+      "duration": 90,
+      "premiereRu": "2014-11-13"
+    },
+    {
+      "kinopoiskId": 468558,
+      "nameRu": "Рио, я люблю тебя",
+      "nameEn": "Rio, Eu Te Amo",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/468558.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/468558.jpg",
+      "countries": [
+        {
+          "country": "Бразилия"
+        },
+        {
+          "country": "США"
+        },
+        {
+          "country": "Франция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 104,
+      "premiereRu": "2014-11-13"
+    },
+    {
+      "kinopoiskId": 696309,
+      "nameRu": "Отмороженные",
+      "nameEn": "Freezer",
+      "year": 2013,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/696309.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/696309.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        }
+      ],
+      "duration": 82,
+      "premiereRu": "2014-11-13"
+    },
+    {
+      "kinopoiskId": 941996,
+      "nameRu": "RSC: Бесплодные усилия любви",
+      "nameEn": "Royal Shakespeare Company: Love's Labour's Lost",
+      "year": 2015,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/941996.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/941996.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 155,
+      "premiereRu": "2014-11-18"
+    },
+    {
+      "kinopoiskId": 565930,
+      "nameRu": "Бесплодные усилия любви",
+      "nameEn": "Love's Labour's Lost (Globe Theatre Version)",
+      "year": 2009,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/565930.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/565930.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 167,
+      "premiereRu": "2014-11-19"
+    },
+    {
+      "kinopoiskId": 661911,
+      "nameRu": "Голодные игры: Сойка-пересмешница. Часть I",
+      "nameEn": "The Hunger Games: Mockingjay - Part 1",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/661911.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/661911.jpg",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Канада"
+        },
+        {
+          "country": "Франция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "триллер"
+        }
+      ],
+      "duration": 123,
+      "premiereRu": "2014-11-20"
+    },
+    {
+      "kinopoiskId": 777091,
+      "nameRu": "Superнянь",
+      "nameEn": "Babysitting",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/777091.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/777091.jpg",
+      "countries": [
+        {
+          "country": "Франция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 84,
+      "premiereRu": "2014-11-20"
+    },
+    {
+      "kinopoiskId": 723825,
+      "nameRu": "Sex, кофе, сигареты",
+      "nameEn": "",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/723825.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/723825.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 85,
+      "premiereRu": "2014-11-20"
+    },
+    {
+      "kinopoiskId": 617220,
+      "nameRu": "Не бойся, я с тобой! 1919",
+      "nameEn": "",
+      "year": 2013,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/617220.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/617220.jpg",
+      "countries": [
+        {
+          "country": "Азербайджан"
+        },
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "боевик"
+        }
+      ],
+      "duration": 110,
+      "premiereRu": "2014-11-20"
+    },
+    {
+      "kinopoiskId": 775400,
+      "nameRu": "Каникулы маленького Николя",
+      "nameEn": "Les vacances du petit Nicolas",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/775400.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/775400.jpg",
+      "countries": [
+        {
+          "country": "Франция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "семейный"
+        }
+      ],
+      "duration": 97,
+      "premiereRu": "2014-11-20"
+    },
+    {
+      "kinopoiskId": 745090,
+      "nameRu": "Сын",
+      "nameEn": "",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/745090.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/745090.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "duration": 93,
+      "premiereRu": "2014-11-20"
+    },
+    {
+      "kinopoiskId": 844105,
+      "nameRu": "КиноДетство. День медведя",
+      "nameEn": "",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/844105.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/844105.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "детский"
+        }
+      ],
+      "duration": null,
+      "premiereRu": "2014-11-22"
+    },
+    {
+      "kinopoiskId": 843387,
+      "nameRu": "Севильский цирюльник",
+      "nameEn": "Il Barbiere di Siviglia",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/843387.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/843387.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [],
+      "duration": 205,
+      "premiereRu": "2014-11-22"
+    },
+    {
+      "kinopoiskId": 843372,
+      "nameRu": "Дочь фараона",
+      "nameEn": "",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/843372.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/843372.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "duration": 175,
+      "premiereRu": "2014-11-23"
+    },
+    {
+      "kinopoiskId": 662337,
+      "nameRu": "Несносные боссы 2",
+      "nameEn": "Horrible Bosses 2",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/662337.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/662337.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "duration": 108,
+      "premiereRu": "2014-11-27"
+    },
+    {
+      "kinopoiskId": 676770,
+      "nameRu": "Третья персона",
+      "nameEn": "Third Person",
+      "year": 2013,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/676770.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/676770.jpg",
+      "countries": [
+        {
+          "country": "Бельгия"
+        },
+        {
+          "country": "США"
+        },
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        }
+      ],
+      "duration": 137,
+      "premiereRu": "2014-11-27"
+    },
+    {
+      "kinopoiskId": 607608,
+      "nameRu": "Пингвины Мадагаскара",
+      "nameEn": "Penguins of Madagascar",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/607608.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/607608.jpg",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "боевик"
+        }
+      ],
+      "duration": 92,
+      "premiereRu": "2014-11-27"
+    },
+    {
+      "kinopoiskId": 799128,
+      "nameRu": "Как меня зовут",
+      "nameEn": "",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/799128.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/799128.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "duration": 90,
+      "premiereRu": "2014-11-27"
+    },
+    {
+      "kinopoiskId": 673077,
+      "nameRu": "Джезабель",
+      "nameEn": "Jessabelle",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/673077.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/673077.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "ужасы"
+        }
+      ],
+      "duration": 90,
+      "premiereRu": "2014-11-27"
+    },
+    {
+      "kinopoiskId": 731475,
+      "nameRu": "Моя Госпожа",
+      "nameEn": "My Mistress",
+      "year": 2013,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/731475.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/731475.jpg",
+      "countries": [
+        {
+          "country": "Австралия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        }
+      ],
+      "duration": 104,
+      "premiereRu": "2014-11-27"
+    },
+    {
+      "kinopoiskId": 707294,
+      "nameRu": "Логово зверя",
+      "nameEn": "Haunt",
+      "year": 2013,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/707294.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/707294.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "ужасы"
+        },
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "детектив"
+        }
+      ],
+      "duration": 86,
+      "premiereRu": "2014-11-27"
+    },
+    {
+      "kinopoiskId": 804619,
+      "nameRu": "Прости за любовь",
+      "nameEn": "Perdona si te llamo amor",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/804619.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/804619.jpg",
+      "countries": [
+        {
+          "country": "Испания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мелодрама"
+        }
+      ],
+      "duration": 105,
+      "premiereRu": "2014-11-27"
+    },
+    {
+      "kinopoiskId": 462924,
+      "nameRu": "Легкие деньги",
+      "nameEn": "Good People",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/462924.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/462924.jpg",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Великобритания"
+        },
+        {
+          "country": "Дания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "криминал"
+        },
+        {
+          "genre": "боевик"
+        }
+      ],
+      "duration": 90,
+      "premiereRu": "2014-11-27"
+    },
+    {
+      "kinopoiskId": 763997,
+      "nameRu": "Правила жизни французского парня",
+      "nameEn": "Libre et assoupi",
+      "year": 2013,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/763997.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/763997.jpg",
+      "countries": [
+        {
+          "country": "Франция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 93,
+      "premiereRu": "2014-11-27"
+    },
+    {
+      "kinopoiskId": 844189,
+      "nameRu": "Fantastic Shorts",
+      "nameEn": "Fantastic Shorts",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/844189.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/844189.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        }
+      ],
+      "duration": null,
+      "premiereRu": "2014-11-27"
+    },
+    {
+      "kinopoiskId": 844104,
+      "nameRu": "КиноДетство. Тише, бабушка спит",
+      "nameEn": "",
+      "year": 2014,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/844104.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/844104.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "детский"
+        }
+      ],
+      "duration": 55,
+      "premiereRu": "2014-11-29"
+    }
+  ]
+}

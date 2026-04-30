@@ -1,0 +1,67 @@
+{
+  "kinopoiskId": 258687,
+  "kinopoiskHDId": "4b6323adfb04e652a9b88f6096d01ae9",
+  "imdbId": "tt0816692",
+  "nameRu": "Интерстеллар",
+  "nameEn": null,
+  "nameOriginal": "Interstellar",
+  "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/258687.jpg",
+  "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/258687.jpg",
+  "coverUrl": "https://avatars.mds.yandex.net/get-ott/212840/2a0000017c2839ec77fcdddef3d2ea36a2dc/orig",
+  "logoUrl": "https://avatars.mds.yandex.net/get-ott/2439731/2a0000016fae962c6bf6cc87fd2098ed9035/orig",
+  "reviewsCount": 1279,
+  "ratingGoodReview": 79,
+  "ratingGoodReviewVoteCount": 921,
+  "ratingKinopoisk": 8.7,
+  "ratingKinopoiskVoteCount": 1142870,
+  "ratingImdb": 8.7,
+  "ratingImdbVoteCount": 2500000,
+  "ratingFilmCritics": 7.2,
+  "ratingFilmCriticsVoteCount": 374,
+  "ratingAwait": null,
+  "ratingAwaitCount": 0,
+  "ratingRfCritics": 81,
+  "ratingRfCriticsVoteCount": 31,
+  "webUrl": "https://www.kinopoisk.ru/film/258687/",
+  "year": 2014,
+  "filmLength": 169,
+  "slogan": "Следующий шаг человечества станет величайшим",
+  "description": "Когда засуха, пыльные бури и вымирание растений приводят человечество к продовольственному кризису, коллектив исследователей и учёных отправляется сквозь червоточину (которая предположительно соединяет области пространства-времени через большое расстояние) в путешествие, чтобы превзойти прежние ограничения для космических путешествий человека и найти планету с подходящими для человечества условиями.",
+  "shortDescription": "Фантастический эпос про задыхающуюся Землю, космические полеты и парадоксы времени. «Оскар» за спецэффекты",
+  "editorAnnotation": null,
+  "isTicketsAvailable": false,
+  "productionStatus": null,
+  "type": "FILM",
+  "ratingMpaa": "pg13",
+  "ratingAgeLimits": "age18",
+  "countries": [
+    {
+      "country": "США"
+    },
+    {
+      "country": "Великобритания"
+    },
+    {
+      "country": "Канада"
+    }
+  ],
+  "genres": [
+    {
+      "genre": "драма"
+    },
+    {
+      "genre": "фантастика"
+    },
+    {
+      "genre": "приключения"
+    }
+  ],
+  "startYear": null,
+  "endYear": null,
+  "serial": false,
+  "shortFilm": false,
+  "completed": false,
+  "hasImax": true,
+  "has3D": false,
+  "lastSync": "2026-04-20T03:02:36.086591"
+}
