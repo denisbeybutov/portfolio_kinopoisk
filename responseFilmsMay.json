@@ -1,0 +1,1117 @@
+{
+  "total": 46,
+  "items": [
+    {
+      "kinopoiskId": 1990,
+      "nameRu": "На гребне волны",
+      "nameEn": "Point Break",
+      "year": 1991,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1990.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1990.jpg",
+      "countries": [
+        {
+          "country": "Япония"
+        },
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "duration": 117,
+      "premiereRu": "2026-05-07"
+    },
+    {
+      "kinopoiskId": 684131,
+      "nameRu": "Патэма наоборот",
+      "nameEn": "Sakasama no Patema",
+      "year": 2013,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/684131.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/684131.jpg",
+      "countries": [
+        {
+          "country": "Япония"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "аниме"
+        },
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "мелодрама"
+        }
+      ],
+      "duration": 99,
+      "premiereRu": "2026-05-07"
+    },
+    {
+      "kinopoiskId": 6081179,
+      "nameRu": "Холостяк в Италии",
+      "nameEn": "Solo Mio",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/6081179.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/6081179.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 100,
+      "premiereRu": "2026-05-07"
+    },
+    {
+      "kinopoiskId": 5454871,
+      "nameRu": "Вверх по волшебному дереву",
+      "nameEn": "The Magic Faraway Tree",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5454871.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5454871.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "семейный"
+        },
+        {
+          "genre": "фэнтези"
+        }
+      ],
+      "duration": 110,
+      "premiereRu": "2026-05-07"
+    },
+    {
+      "kinopoiskId": 10359971,
+      "nameRu": "Хокум",
+      "nameEn": "Hokum",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/10359971.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/10359971.jpg",
+      "countries": [
+        {
+          "country": "Ирландия"
+        },
+        {
+          "country": "ОАЭ"
+        },
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "ужасы"
+        }
+      ],
+      "duration": 101,
+      "premiereRu": "2026-05-07"
+    },
+    {
+      "kinopoiskId": 7730613,
+      "nameRu": "Шурале",
+      "nameEn": "",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/7730613.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/7730613.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "фэнтези"
+        }
+      ],
+      "duration": null,
+      "premiereRu": "2026-05-07"
+    },
+    {
+      "kinopoiskId": 4909690,
+      "nameRu": "Как стать миллиардером",
+      "nameEn": "Bull Run",
+      "year": 2024,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/4909690.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/4909690.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 97,
+      "premiereRu": "2026-05-07"
+    },
+    {
+      "kinopoiskId": 6446909,
+      "nameRu": "Отец",
+      "nameEn": "",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/6446909.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/6446909.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "военный"
+        },
+        {
+          "genre": "история"
+        }
+      ],
+      "duration": 106,
+      "premiereRu": "2026-05-07"
+    },
+    {
+      "kinopoiskId": 5518066,
+      "nameRu": "Несси. Чудище из Лохх-Несс",
+      "nameEn": "Ruffen - Sjøormen som ikke kunne svømme",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5518066.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5518066.jpg",
+      "countries": [
+        {
+          "country": "Норвегия"
+        },
+        {
+          "country": "Бельгия"
+        },
+        {
+          "country": "Германия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "семейный"
+        }
+      ],
+      "duration": 80,
+      "premiereRu": "2026-05-07"
+    },
+    {
+      "kinopoiskId": 10601215,
+      "nameRu": "Пингвинёнок Пороро: Приключения в мире сладостей",
+      "nameEn": "Pororo, Sweet Castle Adventure",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/10601215.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/10601215.jpg",
+      "countries": [
+        {
+          "country": "Корея Южная"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "детский"
+        },
+        {
+          "genre": "приключения"
+        }
+      ],
+      "duration": 67,
+      "premiereRu": "2026-05-07"
+    },
+    {
+      "kinopoiskId": 461,
+      "nameRu": "Разговор",
+      "nameEn": "The Conversation",
+      "year": 1974,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/461.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/461.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "детектив"
+        }
+      ],
+      "duration": 113,
+      "premiereRu": "2026-05-14"
+    },
+    {
+      "kinopoiskId": 6581561,
+      "nameRu": "Опасные отношения",
+      "nameEn": "Over Your Dead Body",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/6581561.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/6581561.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 105,
+      "premiereRu": "2026-05-14"
+    },
+    {
+      "kinopoiskId": 6122043,
+      "nameRu": "Ограбить Лондон",
+      "nameEn": "Fuze",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/6122043.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/6122043.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "duration": 98,
+      "premiereRu": "2026-05-14"
+    },
+    {
+      "kinopoiskId": 5510758,
+      "nameRu": "Своя в доску",
+      "nameEn": "",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5510758.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5510758.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 90,
+      "premiereRu": "2026-05-14"
+    },
+    {
+      "kinopoiskId": 7045507,
+      "nameRu": "Аэропорт",
+      "nameEn": "",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/7045507.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/7045507.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "детектив"
+        },
+        {
+          "genre": "триллер"
+        }
+      ],
+      "duration": null,
+      "premiereRu": "2026-05-14"
+    },
+    {
+      "kinopoiskId": 9124580,
+      "nameRu": "Лео и Тиг. Дорога на Байкал",
+      "nameEn": "",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/9124580.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/9124580.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        }
+      ],
+      "duration": 65,
+      "premiereRu": "2026-05-14"
+    },
+    {
+      "kinopoiskId": 8730065,
+      "nameRu": "Паранормальное явление. Сеул",
+      "nameEn": "Homkaem",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/8730065.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/8730065.jpg",
+      "countries": [
+        {
+          "country": "Корея Южная"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "ужасы"
+        }
+      ],
+      "duration": 93,
+      "premiereRu": "2026-05-14"
+    },
+    {
+      "kinopoiskId": 10187081,
+      "nameRu": "Неожиданные связи 2",
+      "nameEn": "Cocorico 2",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/10187081.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/10187081.jpg",
+      "countries": [
+        {
+          "country": "Франция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 91,
+      "premiereRu": "2026-05-14"
+    },
+    {
+      "kinopoiskId": 8690643,
+      "nameRu": "Пропала собака",
+      "nameEn": "Io non ti lascio solo",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/8690643.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/8690643.jpg",
+      "countries": [
+        {
+          "country": "Италия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "семейный"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 98,
+      "premiereRu": "2026-05-14"
+    },
+    {
+      "kinopoiskId": 6462694,
+      "nameRu": "Убийцы поневоле",
+      "nameEn": "Lake George",
+      "year": 2024,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/6462694.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/6462694.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "duration": 118,
+      "premiereRu": "2026-05-14"
+    },
+    {
+      "kinopoiskId": 11680966,
+      "nameRu": "Булгаков. Тайна мастера",
+      "nameEn": "",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/11680966.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/11680966.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        },
+        {
+          "genre": "биография"
+        }
+      ],
+      "duration": 52,
+      "premiereRu": "2026-05-14"
+    },
+    {
+      "kinopoiskId": 11930432,
+      "nameRu": "Театр в кино: Принцесса цирка",
+      "nameEn": "",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/11930432.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/11930432.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мюзикл"
+        },
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 143,
+      "premiereRu": "2026-05-15"
+    },
+    {
+      "kinopoiskId": 103380,
+      "nameRu": "Помпоко: Война тануки в период Хэйсэй",
+      "nameEn": "Heisei tanuki gassen pompoko",
+      "year": 1994,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/103380.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/103380.jpg",
+      "countries": [
+        {
+          "country": "Япония"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "аниме"
+        },
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "фэнтези"
+        }
+      ],
+      "duration": 119,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 5437609,
+      "nameRu": "Грязные деньги",
+      "nameEn": "In the Grey",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5437609.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5437609.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        },
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "триллер"
+        }
+      ],
+      "duration": 98,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 5379718,
+      "nameRu": "Проклятие Золушки: Кровь на туфельке",
+      "nameEn": "Cinderella's Curse",
+      "year": 2024,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5379718.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5379718.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "ужасы"
+        }
+      ],
+      "duration": 82,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 11095483,
+      "nameRu": "Американский маньяк",
+      "nameEn": "The Huntsman",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/11095483.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/11095483.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "детектив"
+        }
+      ],
+      "duration": 105,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 8758556,
+      "nameRu": "Не одна дома 3. Выпускной",
+      "nameEn": "",
+      "year": 0,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/8758556.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/8758556.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "семейный"
+        }
+      ],
+      "duration": null,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 5216037,
+      "nameRu": "Степные боги",
+      "nameEn": "",
+      "year": 2024,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5216037.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5216037.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "duration": 84,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 6281563,
+      "nameRu": "Проклятый рыцарь",
+      "nameEn": "The Dreadful",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/6281563.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/6281563.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "ужасы"
+        },
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "боевик"
+        }
+      ],
+      "duration": null,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 10355286,
+      "nameRu": "Обсессия",
+      "nameEn": "Obsession",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/10355286.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/10355286.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "ужасы"
+        }
+      ],
+      "duration": 108,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 7924298,
+      "nameRu": "Богатыри",
+      "nameEn": "",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/7924298.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/7924298.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "семейный"
+        },
+        {
+          "genre": "фэнтези"
+        }
+      ],
+      "duration": null,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 11129382,
+      "nameRu": "Пока небо смотрит",
+      "nameEn": "",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/11129382.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/11129382.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "duration": 75,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 10513208,
+      "nameRu": "Хранитель камфорного дерева",
+      "nameEn": "Kusunoki no Bannin",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/10513208.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/10513208.jpg",
+      "countries": [
+        {
+          "country": "Япония"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "аниме"
+        },
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "duration": 113,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 10425174,
+      "nameRu": "Тень",
+      "nameEn": "Scotty",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/10425174.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/10425174.jpg",
+      "countries": [
+        {
+          "country": "Германия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "семейный"
+        }
+      ],
+      "duration": 79,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 7953652,
+      "nameRu": "Два стула",
+      "nameEn": "",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/7953652.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/7953652.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        },
+        {
+          "country": "Италия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        }
+      ],
+      "duration": 71,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 10152878,
+      "nameRu": "Росселлини. Жизнь без сценария",
+      "nameEn": "Roberto Rossellini – Più di una Vita",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/10152878.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/10152878.jpg",
+      "countries": [
+        {
+          "country": "Италия"
+        },
+        {
+          "country": "Латвия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        },
+        {
+          "genre": "биография"
+        }
+      ],
+      "duration": 96,
+      "premiereRu": "2026-05-21"
+    },
+    {
+      "kinopoiskId": 5437614,
+      "nameRu": "Майкл",
+      "nameEn": "Michael",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5437614.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5437614.jpg",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "биография"
+        },
+        {
+          "genre": "музыка"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "duration": 127,
+      "premiereRu": "2026-05-28"
+    },
+    {
+      "kinopoiskId": 5366046,
+      "nameRu": "Кощей. Тайна живой воды",
+      "nameEn": "",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5366046.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5366046.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": null,
+      "premiereRu": "2026-05-28"
+    },
+    {
+      "kinopoiskId": 8226213,
+      "nameRu": "Иллюзия убийства",
+      "nameEn": "Reversion",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/8226213.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/8226213.jpg",
+      "countries": [
+        {
+          "country": "Испания"
+        },
+        {
+          "country": "Доминикана"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "детектив"
+        }
+      ],
+      "duration": 97,
+      "premiereRu": "2026-05-28"
+    },
+    {
+      "kinopoiskId": 8915212,
+      "nameRu": "Пропасть",
+      "nameEn": "",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/8915212.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/8915212.jpg",
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        }
+      ],
+      "duration": null,
+      "premiereRu": "2026-05-28"
+    },
+    {
+      "kinopoiskId": 10064742,
+      "nameRu": "Обитель зла: Мутация",
+      "nameEn": "The Cure",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/10064742.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/10064742.jpg",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "фантастика"
+        }
+      ],
+      "duration": 91,
+      "premiereRu": "2026-05-28"
+    },
+    {
+      "kinopoiskId": 10646933,
+      "nameRu": "Мечтать не вредно",
+      "nameEn": "Le rêve américain",
+      "year": 2026,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/10646933.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/10646933.jpg",
+      "countries": [
+        {
+          "country": "Франция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "спорт"
+        }
+      ],
+      "duration": 121,
+      "premiereRu": "2026-05-28"
+    },
+    {
+      "kinopoiskId": 10110805,
+      "nameRu": "Монахиня из Борли. Возвращение",
+      "nameEn": "Borley Rectory: The Awakening",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/10110805.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/10110805.jpg",
+      "countries": [
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "ужасы"
+        }
+      ],
+      "duration": 88,
+      "premiereRu": "2026-05-28"
+    },
+    {
+      "kinopoiskId": 10020838,
+      "nameRu": "Чао",
+      "nameEn": "ChaO",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/10020838.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/10020838.jpg",
+      "countries": [
+        {
+          "country": "Япония"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "фэнтези"
+        },
+        {
+          "genre": "мелодрама"
+        }
+      ],
+      "duration": 90,
+      "premiereRu": "2026-05-28"
+    },
+    {
+      "kinopoiskId": 11438731,
+      "nameRu": "Убийственная вечеринка",
+      "nameEn": "Classe moyenne",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/11438731.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/11438731.jpg",
+      "countries": [
+        {
+          "country": "Франция"
+        },
+        {
+          "country": "Бельгия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "duration": 95,
+      "premiereRu": "2026-05-28"
+    },
+    {
+      "kinopoiskId": 12010643,
+      "nameRu": "Зомбилэнд-сага. Фильм",
+      "nameEn": "Zombieland Saga Movie: Yumeginga Paradise",
+      "year": 2025,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/12010643.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/12010643.jpg",
+      "countries": [
+        {
+          "country": "Япония"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "аниме"
+        },
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "фэнтези"
+        }
+      ],
+      "duration": 120,
+      "premiereRu": "2026-05-28"
+    }
+  ]
+}
