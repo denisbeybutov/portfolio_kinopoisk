@@ -1,15 +1,10 @@
+// перменные
+// для взятия данных с сервера
 const server = false;
 
 const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July','August', 'September','October','November', 'December'];
 const monthRu = ['Январь', 'Февраль', 'Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь', 'Декабрь'];
 const monthRuDeclen = ['Января', 'Февраля', 'Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября', 'Декабря'];
-
-//склонение числительных
-const declOfNum = (number,titles) => {
-    let cases = [2,0,1,1,1,2];
-    return titles[(number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ]
-}
-// console.log(declOfNum(21, ['страница', 'страницы', 'страниц']));
 
 const API_KEY = 'd4a30300-492f-4d57-b38e-195b3ffe0e04';
 const currentYear = new Date().getFullYear();
@@ -26,38 +21,22 @@ const appListEl = document.querySelector('.app__list');
 const yearEl = document.querySelector('.year');
 const monthEl = document.querySelector('.month');
 const paginationsEl = document.querySelectorAll('.app__pagination');
+const modalEl = document.querySelector('.modal')
+const modalButtonEl = document.querySelector('.modal__button');
 
 // устанавалием текущий месяц и год
 yearEl.textContent = currentYear;
 monthEl.textContent = currentMonthRu;
 
 
-
-const initApp = async (page = 1) => {
-    let data;
-    if(server) {
-        console.log('server')
-        const url = `https://kinopoiskapiunofficial.tech/api/v2.2/films/premieres?year=${currentYear}&month=${currentMonthText}`;
-
-        const response = await fetch(url, {
-            method: 'GET',
-            headers: {
-                'X-API-KEY': 'd4a30300-492f-4d57-b38e-195b3ffe0e04',
-                'Content-Type': 'application/json',
-            }
-        });
-         data = await response.json();
-    } else {
-        console.log('local file')
-        const response = await fetch('responseFilms.json');
-         data = await response.json()
-    }
-    
-    
-    console.log(data)
-    return data;
-
+//------функции
+//склонение числительных
+const declOfNum = (number,titles) => {
+    let cases = [2,0,1,1,1,2];
+    return titles[(number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ]
 }
+
+
 
 async function showFilmPage(listOfFilms){
     const start = (currentPage-1)*countFilmsOnPage;
@@ -71,9 +50,9 @@ async function showFilmPage(listOfFilms){
         const date = `${dateRow.getDate()} ${monthRuDeclen[dateRow.getMonth()]}`
         const duration = `${film.duration} ${declOfNum(film.duration, ['минута', 'минуты', 'минут'])}`;
         
-        appListEl.innerHTML += `<li class="app__list-item">
+        appListEl.innerHTML += `<li class="app__list-item" data-id='${i}'>
                     <article class="app__card movie-card">
-                        <a href="https://www.kinopoisk.ru/film/${film.kinopoiskId}" target="_blank" class="movie-card__link">
+                        <button class="movie-card__link">
                             <div class="movie-card__image-wrapper">
                                 <img src=${film.posterUrlPreview} alt="#" loading="lazy" class="movie-card__image">
                                 <div class="movie-card__hover">
@@ -84,7 +63,7 @@ async function showFilmPage(listOfFilms){
                             </div>
                             <h2 class="movie-card__title">${film.nameRu}</h2>
                             <div class="movie-card__date">${date}</div>
-                        </a>
+                        </button>
                     </article>
                 </li>`
     }
@@ -121,6 +100,31 @@ async function showResults(pages, listOfFilms){
     await showFilmPage(listOfFilms);
 }
 
+// загружаем данные
+const initApp = async (page = 1) => {
+    let data;
+    if(server) {
+        console.log('server')
+        const url = `https://kinopoiskapiunofficial.tech/api/v2.2/films/premieres?year=${currentYear}&month=${currentMonthText}`;
+
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'X-API-KEY': 'd4a30300-492f-4d57-b38e-195b3ffe0e04',
+                'Content-Type': 'application/json',
+            }
+        });
+         data = await response.json();
+    } else {
+        console.log('local file')
+        const response = await fetch('responseFilms.json');
+         data = await response.json()
+    }
+    
+    return data;
+
+}
+
 async function showFilms() {
     // получаем данные 
     const data = await initApp();
@@ -139,7 +143,34 @@ async function showFilms() {
         })
     }) 
 
-    
+    // клик по карточке фильма, открываем модальное окно
+    appListEl.addEventListener('click', async (event) => {
+        console.log(event.target.closest('[data-id]').dataset.id)
+        const currentFilmId = event.target.closest('[data-id]').dataset.id;
+        modalEl.classList.remove('hidden');
+        // console.log(listOfFilms[currentFilmId].kinopoiskId);
+        console.log(data)
+        // currentKinopoiskFilmId = listOfFilms[currentFilmId].kinopoiskId;        
+        // const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${currentKinopoiskFilmId}`, {
+        //     method: 'GET',
+        //     headers: {
+        //         'X-API-KEY': 'd4a30300-492f-4d57-b38e-195b3ffe0e04',
+        //         'Content-Type': 'application/json',
+        //     }
+        // })        
+        // const dataOfFilm = await response.json();
+        // console.log(data.nameRu, data.posterUrlPreview, data.description, data.ratingKinopoisk, data.filmLength, data.genres.map(g => g.genre).join(', '))
+        
+        
+
+    });
+
+    // клик по крестику на модальном окне , закрываем его
+    modalButtonEl.addEventListener('click', () => {
+        modalEl.classList.add('hidden');
+    })
+
+
     
 
 }
