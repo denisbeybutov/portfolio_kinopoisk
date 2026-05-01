@@ -2,6 +2,7 @@
 // для взятия данных с сервера
 const server = true;
 const server1 = true;
+const server2 = true;
 
 const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July','August', 'September','October','November', 'December'];
 const monthRu = ['Январь', 'Февраль', 'Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь', 'Декабрь'];
@@ -15,35 +16,33 @@ let currentMonthRu;// = monthRu[currentMonth];
 const countFilmsOnPage = 20;
 let currentPage = 1;
 
-
-
 // переменные для элементов страницы
 const appListEl = document.querySelector('.app__list');
 const yearEl = document.querySelector('.year');
 const monthEl = document.querySelector('.month');
-const paginationsEl = document.querySelectorAll('.app__pagination');
+const paginationEl = document.querySelector('.app__pagination');
+// const paginationsEl = document.querySelectorAll('.app__pagination');
 const modalEl = document.querySelector('.modal')
 const modalButtonEl = document.querySelector('.modal__button');
 const inputEl = document.getElementById('input');
 
-// устанавалием текущий месяц и год
-// yearEl.textContent = currentYear;
-// monthEl.textContent = currentMonthRu;
+let currentPaginationHandler = null;
+let currentModalHandler = null;
 
+//-------------------функции------------------
 
-//------функции
 //склонение числительных
 const declOfNum = (number,titles) => {
     let cases = [2,0,1,1,1,2];
     return titles[(number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ]
 }
-
+// отображение бюджетов чисел через пробел после 3 симовлов
 function getNumberWithSpaces(num) {
     return num.toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
-
-async function showFilmPage(listOfFilms){
+// рисуем фильмы на странице
+ function showFilmPage(listOfFilms){
     const start = (currentPage-1)*countFilmsOnPage;
     const end = currentPage*countFilmsOnPage;
     for(let i = start; i < end; i++){
@@ -74,43 +73,48 @@ async function showFilmPage(listOfFilms){
     }
 }
 
-function showPagination(pages){
-    paginationsEl.forEach(pag => pag.innerHTML = '')
+ function showPagination(pages){
+    
+    paginationEl.innerHTML = ''
     for(let i = 0; i < pages; i++) {
         
-        paginationsEl.forEach(el => {
-            el.innerHTML += `<li class="app__pagination-item">
+        paginationEl.innerHTML += `<li class="app__pagination-item">
                     <a href="#" class="app__pagination-link" data-id="${i+1}">${i+1}</a>
                 </li>`;
                 
                 if(i === pages-1) {
                     
-                    el.querySelector(`[data-id="${currentPage}"]`).classList.add('app__pagination-link--current');
+                    paginationEl.querySelector(`[data-id="${currentPage}"]`).classList.add('app__pagination-link--current');
                     
                 }
-        })
+        
         
         
     }
+    // console.log(currentPage)
+    // paginationsEl.forEach(el => {
+    //     el.querySelector(`[data-id="${currentPage}"]`).classList.add('app__pagination-link--current');
+    // })
 }
 
-async function showResults(pages, listOfFilms){
+ function showResults(pages, listOfFilms){
     //рисуем пагинацию
     // paginationsEl
-    paginationsEl.innerHTML = '';
-    showPagination(pages);
+    paginationEl.innerHTML = '';
+    // console.log('in show result',pages)
+     showPagination(pages);
 
     //рисуем фильмы
     appListEl.innerHTML = '';
-    await showFilmPage(listOfFilms);
+     showFilmPage(listOfFilms);
 }
 
-// загружаем данные
+// загружаем данные - список фильмов по месяцу и году
 const initApp = async (page = 1) => {
     let data;
     if(server) {
         console.log('server')
-        console.log(currentYear, currentMonthText)
+        // console.log(currentYear, currentMonthText)
         const url = `https://kinopoiskapiunofficial.tech/api/v2.2/films/premieres?year=${currentYear}&month=${currentMonthText}`;
 
         const response = await fetch(url, {
@@ -127,16 +131,18 @@ const initApp = async (page = 1) => {
          data = await response.json()
     }
     
-    console.log(data)
+    // console.log(data)
     return data;
 
 }
 
+// загружаем данные - описание фильма
 async function getDescriptionFilm(listOfFilms, currentFilmId) {
 
     currentKinopoiskFilmId = listOfFilms[currentFilmId].kinopoiskId;        
     let dataOfFilm;
     if(server1) {
+        console.log('server')
         const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${currentKinopoiskFilmId}`, {
             method: 'GET',
             headers: {
@@ -145,9 +151,10 @@ async function getDescriptionFilm(listOfFilms, currentFilmId) {
             }
         })        
         dataOfFilm = await response.json();
-        // console.log( dataOfFilm.description, dataOfFilm.ratingKinopoisk)
+        
     }
     else {
+        console.log('local file')
         const response = await fetch('./dateOfMonth/response_inter_film.json')
         dataOfFilm = await response.json()
     }
@@ -157,10 +164,12 @@ async function getDescriptionFilm(listOfFilms, currentFilmId) {
         }
 }
 
+// загруажем данные - бюджет фильма
 async function getBudgetFilm(listOfFilms, currentFilmId) {
     currentKinopoiskFilmId = listOfFilms[currentFilmId].kinopoiskId; 
     let dataOfFilm;  
     if(server1){
+        console.log('server')
         const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${currentKinopoiskFilmId}/box_office`, {
             method: 'GET',
             headers: {
@@ -170,6 +179,7 @@ async function getBudgetFilm(listOfFilms, currentFilmId) {
         })        
          dataOfFilm = await response.json();
     } else {
+        console.log('local file')
         const response = await fetch('./dateOfMonth/response_inter_boxoffice.json')
         dataOfFilm = await response.json()
     }
@@ -188,122 +198,168 @@ async function getBudgetFilm(listOfFilms, currentFilmId) {
                        
 }
 
-async function showFilms() {
-    // let yourNumber = "125478521478";
+// загруажем данные - бюджет фильма
+async function getLinkedFilms(listOfFilms, currentFilmId) {
+    currentKinopoiskFilmId = listOfFilms[currentFilmId].kinopoiskId; 
+    let dataOfFilm;  
+    if(server2){
+        console.log('server')
+        const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${currentKinopoiskFilmId}/relations`, {
+            method: 'GET',
+            headers: {
+                'X-API-KEY': 'd4a30300-492f-4d57-b38e-195b3ffe0e04',
+                'Content-Type': 'application/json',
+            }
+        })        
+         dataOfFilm = await response.json();
+    } else {
+        console.log('local file')
+        const response = await fetch('./dateOfMonth/response_inter_boxoffice.json')
+        dataOfFilm = await response.json()
+    }
+
+        // console.log(dataOfFilm)
+        return dataOfFilm;
+
+                       
+}
+
+function paintModalWindow(currentFilm, dataOfFilm, budgetString,date, linkedFilms) {
     
-    // console.log(getNumberWithSpaces(yourNumber))
+    const linkedFilmString = linkedFilms.items.map(film => {
+        if(!film.nameRu || !film.posterUrlPreview) return;
+        return `<li class="modal__linked-item">
+                    <img class="modal__linked-img" src=${film.posterUrlPreview}>  
+                    <p>${film.nameRu}</p>
+                                      
+                </li>`
+    }).join('');
+    // пишем модальное окно
+    modalEl.innerHTML = `<button class="modal__button" data-close="true">x</button>
+    <p class="modal__name">Подробнее про фильм "${currentFilm.nameRu}"</p>
+    <div class="modal__header">
+        <img class="modal__picture" src=${currentFilm.posterUrlPreview} alt="">
+        <div class="modal__desc-wrapper">                    
+            <p class="modal__rating-kinopoisk">Рейтинг: ${!dataOfFilm.ratingKinopoisk ? 'нет рейтинга': dataOfFilm.ratingKinopoisk}</p>
+            <p class="modal__date">Дата выхода: ${date}</p>
+            <p class="modal__genres">Жанры: ${currentFilm.genres.map(item =>item.genre).join(', ')}</p>
+            <p class="modal__country">Страны: ${currentFilm.countries.map(item=>item.country).join(', ')}</p>
+            <p class="modal__film-length">Продолжительность: ${currentFilm.duration} ${declOfNum(currentFilm.duration, ['минута', 'минуты', 'минут'])}</p>
+            <p class="modal__description">Описание: ${dataOfFilm.description}</p>
+            <p class="modal__budget">${budgetString}</p>                                                
+            <a target="_blank" href="https://www.kinopoisk.ru/film/${currentFilm.kinopoiskId}" class="modal__button-kino">Подробнее на кинопоиске</a>
+        </div>
+    </div>
+    <button class="modal__linked-head">Похожие фильмы</button>
+    <ul class='modal__linked-films hidden'>${linkedFilmString}</ul>`
+    
+}
 
+//показываем модальное окно по клику
+function showModalWindow(data,listOfFilms){
+        return async (event) => {
+            modalEl.innerHTML = 'Загрузка...'
+            const currentFilmId = event.target.closest('[data-id]').dataset.id;
+            const currentFilm = data.items[currentFilmId]; 
+            modalEl.classList.remove('hidden');
 
-    // получаем данные 
-    const data = await initApp();
-    const listOfFilms = data.items;
-    const countOfFilms = data.total;
-    const pages = Math.ceil(countOfFilms / countFilmsOnPage);
+            // взять данные с сервера - бюджеты и описание 
+            const results = await Promise.allSettled([
+                getDescriptionFilm(listOfFilms, currentFilmId),
+                getBudgetFilm(listOfFilms, currentFilmId),
+                getLinkedFilms(listOfFilms, currentFilmId)
+            ]);          
+            const dataOfFilm = results[0].status === 'fulfilled' ? results[0].value : null;
+            const budgetString = results[1].status === 'fulfilled' ? results[1].value : '';
+            const linkedFilms = results[2].status === 'fulfilled' ? results[2].value : '';
+            
+            // обработка даты выхода фильма
+            const dateString = currentFilm.premiereRu;
+            const dateRow = new Date(dateString);
+            const date = `${dateRow.getDate()} ${monthRuDeclen[dateRow.getMonth()]} ${dateRow.getFullYear()}`
+
+            //рисуем модальное окно по данным выше
+            paintModalWindow(currentFilm, dataOfFilm, budgetString, date, linkedFilms);
+            
+            
+            const modalLinkedHeadEl = document.querySelector('.modal__linked-head');
+            modalLinkedHeadEl.addEventListener('click', () => {
+                // console.log(modalLinkedHeadEl.nextElementSibling)
+                modalLinkedHeadEl.nextElementSibling.classList.toggle('hidden');
+            })
+        }
+
+}
+
+function handlePaginationClick(pages,listOfFilms) {
+    return (event) => {
+        currentPage = event.target.dataset.id;            
+        showResults(pages, listOfFilms);
+    }
+}
+
+// показываем фильмы 
+async function showFilms() {
+    if (currentPaginationHandler) {
+        paginationEl.removeEventListener('click', currentPaginationHandler);
+      }
+      if (currentModalHandler) {
+        appListEl.removeEventListener('click', currentModalHandler);
+      }
+
+    // получаем данные по фильмам на введенный месяц и год
+    let data = await initApp();
+    let listOfFilms = data.items;
+    let countOfFilms = data.total;
+    let pages = Math.ceil(countOfFilms / countFilmsOnPage);
+    // console.log('in showfilms',pages)
 
     // рисуем пагинацию и постеры фильмов по 20 штук на странице, передаем кол-во страниц и массив фильмов
     showResults(pages, listOfFilms);
 
     // при клике на пагинации меняем текущую страницу и выводим заново 
-    paginationsEl.forEach(pag => {
-        pag.addEventListener('click', event => {            
-            currentPage = event.target.dataset.id;
-            showResults(pages, listOfFilms);
-        })
-    }) 
+    currentPaginationHandler = handlePaginationClick(pages, listOfFilms);
+    paginationEl.addEventListener('click', currentPaginationHandler)
+    
 
     // клик по карточке фильма, открываем модальное окно
-    appListEl.addEventListener('click', async (event) => {
-        modalEl.innerHTML = 'Загрузка...'
-        const currentFilmId = event.target.closest('[data-id]').dataset.id;
-        const currentFilm = data.items[currentFilmId]; 
-        modalEl.classList.remove('hidden');
-        
-        // const dataOfFilm = await getDescriptionFilm(listOfFilms, currentFilmId);
-
-        // const budgetString = await getBudgetFilm(listOfFilms, currentFilmId);
-
-        const results = await Promise.allSettled([
-            getDescriptionFilm(listOfFilms, currentFilmId),
-            getBudgetFilm(listOfFilms, currentFilmId)
-        ]);
-          
-        const dataOfFilm = results[0].status === 'fulfilled' ? results[0].value : null;
-        const budgetString = results[1].status === 'fulfilled' ? results[1].value : '';
-        
-        // let video;
-        // if(server){
-        //     currentKinopoiskFilmId = listOfFilms[currentFilmId].kinopoiskId; 
-        //     const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${currentKinopoiskFilmId}/videos`, {
-        //         method: 'GET',
-        //         headers: {
-        //             'X-API-KEY': 'd4a30300-492f-4d57-b38e-195b3ffe0e04',
-        //             'Content-Type': 'application/json',
-        //         }
-        //     })        
-        //     video = await response.json();
-        // } else {
-        //     const response = await fetch('./dateOfMonth/response_inter_video.json')
-        //     video = await response.json()
-        // }
-        // console.log(video.items[0].url)
-          
-
-        modalEl.innerHTML = `<button class="modal__button" data-close="true">x</button>
-                <p class="modal__name">Подробнее про фильм "${currentFilm.nameRu}"</p>
-                <div class="modal__header">
-                    <img class="modal__picture" src=${currentFilm.posterUrlPreview} alt="">
-                    <div class="modal__desc-wrapper">                    
-                        <p class="modal__rating-kinopoisk">Рейтинг: ${!dataOfFilm.ratingKinopoisk ? 'нет рейтинга': dataOfFilm.ratingKinopoisk}</p>
-                        <p class="modal__genres">Жанры: ${currentFilm.genres.map(item =>item.genre).join(', ')}</p>
-                        <p class="modal__film-length">Продолжительность: ${currentFilm.duration} ${declOfNum(currentFilm.duration, ['минута', 'минуты', 'минут'])}</p>
-                        <p class="modal__description">Описание: ${dataOfFilm.description}</p>
-                        <p class="modal__budget">${budgetString}</p>                                                
-                        <a target="_blank" href="https://www.kinopoisk.ru/film/${currentFilm.kinopoiskId}" class="modal__button-kino">Подробнее на кинопоиске</a>
-                    </div>
-                </div>`
-
-        console.log(data)
-        
-        
-        
-
-    });
+    currentModalHandler = showModalWindow(data, listOfFilms);
+    appListEl.addEventListener('click', currentModalHandler);
 
     // клик по крестику на модальном окне , закрываем его
-    modalEl.addEventListener('click', (event) => {
-        // console.log(event.target.dataset.close)
+    modalEl.addEventListener('click', (event) => {        
         if(event.target.dataset.close) modalEl.classList.add('hidden');
-
     })
 
-
     
-
-    
-
 }
 
 //------точка входа
 
-inputEl.addEventListener('change', async (event) => {
-        // console.log(event.target.value.slice(0,4))
+// выводим кинопремьеры текущего месяца
+currentYear= new Date().getFullYear();
+currentMonth = new Date().getMonth();
+currentMonthText = month[currentMonth].toUpperCase();
+currentMonthRu = monthRu[currentMonth];
+yearEl.textContent = new Date().getFullYear()
+monthEl.textContent = monthRu[currentMonth];
+showFilms();
 
-        // console.log(event.target.value.slice(5,7))
+inputEl.addEventListener('change', async (event) => {
+        // назначаем переменные полученные в инпуте
         currentPage = 1;
         yearEl.textContent = event.target.value.slice(0,4);
         monthEl.textContent = monthRu[event.target.value.slice(5,7)-1];
-
         currentMonth = event.target.value.slice(5,7)-1;
-        console.log(currentMonth, month[currentMonth])
-
         currentYear = event.target.value.slice(0,4);
         currentMonthText = month[event.target.value.slice(5,7)-1].toUpperCase();
-        console.log(currentYear, currentMonthText)
-
-        // currentMonthText = month[currentMonth].toUpperCase();
         currentMonthRu = monthRu[currentMonth];
 
+        // запускаем показ фильмов с введенными данными
         await showFilms();
+
+        
+        
     })
 
 

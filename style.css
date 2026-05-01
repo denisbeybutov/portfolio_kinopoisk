@@ -249,9 +249,11 @@ img{
     
 }
 
-.hidden {
-    display: none;
+.modal__button-kino:hover {
+    background-color: rgba(96, 96, 96, 0.5);
 }
+
+
 
 .input {
     display: flex;
@@ -274,6 +276,50 @@ img{
 
 .input__inp:hover {
     background-color: rgb(255, 255, 255,.2);
+}
+
+.modal__linked-films{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.modal__linked-item{
+    width: 150px;
+    /* height: 250px; */
+    
+}
+
+.modal__linked-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 7px;
+    margin-bottom: 20px;
+    background-color: rgb(174, 174, 174, .5);
+    width: 100%;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-family: "Gerbera Medium";
+    cursor: pointer;
+    border: none;
+    opacity: 0.9;
+}
+
+.modal__linked-head:hover {
+    background-color: rgba(96, 96, 96, 0.5);
+}
+
+.modal__linked-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 1280px) {
@@ -301,7 +347,48 @@ img{
         height:600px;
         width: 100%;
     }
+
+    .movie-card__hover {
+        /* border: 1px solid red; */
+        width: 90%;
+        /* background-color: transparent; */
+        opacity: .9;
+        justify-content: end;
+        height: 20%;        
+        top: 77%;
+        left: 5%;
+        box-shadow: 0px 0px 26px 30px rgba(0, 0, 0, 0.81);
+        clip-path: inset(-74px -5.7% -15.7% -5.7%);
+        padding: 0px;
+
+        
+    }
+     /* .movie-card__hover::after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background: transparent;
+        /* Размытая тень по краям */
+        /* box-shadow: 0px 0px 26px 30px rgba(0, 0, 0, 0.8); */
+        /* pointer-events: none; */
+      /* }  */
+    .movie-card__rating{
+        margin-bottom: 0;
+        
+    }
+
+    .modal__name {
+        max-width: 85%;
+    }
     
+    .modal__button {
+        font-size: 23px;
+        opacity: .6;
+        top: 14px;
+    }
     
 }
 @media (max-width: 550px) {
