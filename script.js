@@ -1,9 +1,9 @@
 // перменные
 // для взятия данных с сервера
-const server = true;
+const server = false;
 const server1 = true;
 const server2 = true;
-
+ 
 const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July','August', 'September','October','November', 'December'];
 const monthRu = ['Январь', 'Февраль', 'Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь', 'Декабрь'];
 const monthRuDeclen = ['Января', 'Февраля', 'Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября', 'Декабря'];
@@ -25,6 +25,7 @@ const paginationEl = document.querySelector('.app__pagination');
 const modalEl = document.querySelector('.modal')
 const modalButtonEl = document.querySelector('.modal__button');
 const inputEl = document.getElementById('input');
+const topShowsEl = document.querySelector('.top-shows__list');
 
 let currentPaginationHandler = null;
 let currentModalHandler = null;
@@ -198,7 +199,7 @@ async function getBudgetFilm(listOfFilms, currentFilmId) {
                        
 }
 
-// загруажем данные - бюджет фильма
+// загруажем данные - похожие фильмы
 async function getLinkedFilms(listOfFilms, currentFilmId) {
     currentKinopoiskFilmId = listOfFilms[currentFilmId].kinopoiskId; 
     let dataOfFilm;  
@@ -223,6 +224,35 @@ async function getLinkedFilms(listOfFilms, currentFilmId) {
 
                        
 }
+
+// загруажем данные - топ 250 сериалов
+async function getTopShows() {    
+    let dataOfFilm;  
+    if(server2){
+        console.log('server')
+        const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_250_TV_SHOWS&page=1`, {
+            method: 'GET',
+            headers: {
+                'X-API-KEY': 'd4a30300-492f-4d57-b38e-195b3ffe0e04',
+                'Content-Type': 'application/json',
+            }
+        })        
+         dataOfFilm = await response.json();
+    } else {
+        console.log('local file')
+        const response = await fetch('./dateOfMonth/response_inter_boxoffice.json')
+        dataOfFilm = await response.json()
+    }
+
+        // console.log(dataOfFilm)
+        return dataOfFilm;
+
+                       
+}
+
+// https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_250_TV_SHOWS&page=1
+
+
 
 function paintModalWindow(currentFilm, dataOfFilm, budgetString,date, linkedFilms) {
     
@@ -337,6 +367,10 @@ async function showFilms() {
 //------точка входа
 
 // выводим кинопремьеры текущего месяца
+
+
+
+
 currentYear= new Date().getFullYear();
 currentMonth = new Date().getMonth();
 currentMonthText = month[currentMonth].toUpperCase();
@@ -361,6 +395,46 @@ inputEl.addEventListener('change', async (event) => {
         
         
     })
+
+
+async function showTopShows() {
+    const topShowsArr = await getTopShows();
+    console.log(topShowsArr.items[0].nameRu)
+    console.log(topShowsEl)
+    let topShowsString = '';
+    topShowsEl.textContent = 'FFF'
+    topShowsEl.innerHTML = topShowsArr.items.map(show => {
+        topShowsString = `<li class="top-shows__item">
+                            <img class="top-shows__image" src=${show.posterUrlPreview}>
+                            <p class="top-shows__text">${show.nameRu}</p>
+                          </li>`;
+                          
+                //           `<li class="app__list-item" data-id='${i}'>
+                //     <article class="app__card movie-card">
+                //         <button class="movie-card__link">
+                //             <div class="movie-card__image-wrapper">
+                //                 <img src=${film.posterUrlPreview} alt="#" loading="lazy" class="movie-card__image">
+                //                 <div class="movie-card__hover">
+                //                     <div class="movie-card__rating">${film.countries.map(item=>item.country).join(', ')}</div>
+                //                     <div class="movie-card__genres">${film.genres.map(item =>item.genre).join(', ')}</div>
+                //                     <div class="movie-card__duration ${!film.duration ? 'movie-card__duration--hidden' : ''}">${duration} </div>
+                //                 </div>
+                //             </div>
+                //             <h2 class="movie-card__title">${film.nameRu}</h2>
+                //             <div class="movie-card__date">${date}</div>
+                //         </button>
+                //     </article>
+                // </li>`
+        return topShowsString                            
+    }).join('');
+    console.log(topShowsString)
+}
+
+showTopShows();
+
+
+
+
 
 
 

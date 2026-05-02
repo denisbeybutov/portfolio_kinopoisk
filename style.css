@@ -12,7 +12,7 @@
 }
 
 :root {
-    --bg-color: #3a3939;
+    --bg-color: #1b1b1b;
     --text-color: #ebebeb;
     --accent-color: #2ba7dc;
     --second-text-color: #a5a5b1;
@@ -173,6 +173,41 @@ img{
 .movie-card__duration--hidden {
     display: none;
 }
+
+.top-shows{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.top-shows__header {
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.top-shows__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.top-shows__item {
+    height: auto;
+}
+
+.top-shows__image {
+    height: 300px;
+}
+
+.top-shows__text {
+    color: var(--text-color);
+}
+
+
 
 .modal {
     position: fixed;
