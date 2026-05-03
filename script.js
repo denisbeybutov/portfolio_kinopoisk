@@ -1,8 +1,10 @@
 // перменные
 // для взятия данных с сервера
-const server = false;
+const server = true;
 const server1 = true;
 const server2 = true;
+const server3 = true;
+
  
 const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July','August', 'September','October','November', 'December'];
 const monthRu = ['Январь', 'Февраль', 'Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь', 'Декабрь'];
@@ -13,8 +15,10 @@ let currentYear; //= new Date().getFullYear();
 let currentMonth; //= new Date().getMonth();
 let currentMonthText;// = month[currentMonth].toUpperCase();
 let currentMonthRu;// = monthRu[currentMonth];
-const countFilmsOnPage = 20;
+const countFilmsOnPage = 10;
 let currentPage = 1;
+let currentItemPopularShows = 0;
+let currentPagePopularShows = 1;
 
 // переменные для элементов страницы
 const appListEl = document.querySelector('.app__list');
@@ -26,6 +30,8 @@ const modalEl = document.querySelector('.modal')
 const modalButtonEl = document.querySelector('.modal__button');
 const inputEl = document.getElementById('input');
 const topShowsEl = document.querySelector('.top-shows__list');
+const topShowsMoreEL = document.querySelector('.top-shows__more');
+const topShowsListEl = document.querySelector('.top-shows__list');
 
 let currentPaginationHandler = null;
 let currentModalHandler = null;
@@ -227,10 +233,11 @@ async function getLinkedFilms(listOfFilms, currentFilmId) {
 
 // загруажем данные - топ 250 сериалов
 async function getTopShows() {    
+
     let dataOfFilm;  
-    if(server2){
+    if(server3){
         console.log('server')
-        const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_250_TV_SHOWS&page=1`, {
+        const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_250_TV_SHOWS&page=${currentPagePopularShows}`, {
             method: 'GET',
             headers: {
                 'X-API-KEY': 'd4a30300-492f-4d57-b38e-195b3ffe0e04',
@@ -240,11 +247,11 @@ async function getTopShows() {
          dataOfFilm = await response.json();
     } else {
         console.log('local file')
-        const response = await fetch('./dateOfMonth/response_inter_boxoffice.json')
+        const response = await fetch('./dateOfMonth/response_top-shows.json')
         dataOfFilm = await response.json()
     }
 
-        // console.log(dataOfFilm)
+        console.log(dataOfFilm)
         return dataOfFilm;
 
                        
@@ -255,18 +262,24 @@ async function getTopShows() {
 
 
 function paintModalWindow(currentFilm, dataOfFilm, budgetString,date, linkedFilms) {
+    let linkedFilmString;
+    if(linkedFilms){
+        linkedFilmString = linkedFilms.items.map(film => {
+            if(!film.nameRu || !film.posterUrlPreview) return;
+            return `<li class="modal__linked-item">
+                        <img class="modal__linked-img" src=${film.posterUrlPreview}>  
+                        <p>${film.nameRu}</p>
+                                          
+                    </li>`
+        }).join('');
+    }
+    else {
+        linkedFilmString = 'Нет данных';
+    }
     
-    const linkedFilmString = linkedFilms.items.map(film => {
-        if(!film.nameRu || !film.posterUrlPreview) return;
-        return `<li class="modal__linked-item">
-                    <img class="modal__linked-img" src=${film.posterUrlPreview}>  
-                    <p>${film.nameRu}</p>
-                                      
-                </li>`
-    }).join('');
     // пишем модальное окно
     modalEl.innerHTML = `<button class="modal__button" data-close="true">x</button>
-    <p class="modal__name">Подробнее про фильм "${currentFilm.nameRu}"</p>
+    <p class="modal__name">"${currentFilm.nameRu}"</p>
     <div class="modal__header">
         <img class="modal__picture" src=${currentFilm.posterUrlPreview} alt="">
         <div class="modal__desc-wrapper">                    
@@ -278,10 +291,11 @@ function paintModalWindow(currentFilm, dataOfFilm, budgetString,date, linkedFilm
             <p class="modal__description">Описание: ${dataOfFilm.description}</p>
             <p class="modal__budget">${budgetString}</p>                                                
             <a target="_blank" href="https://www.kinopoisk.ru/film/${currentFilm.kinopoiskId}" class="modal__button-kino">Подробнее на кинопоиске</a>
+            <button class="modal__linked-head">Похожие фильмы</button>
+            <ul class='modal__linked-films hidden'>${linkedFilmString}</ul>
         </div>
     </div>
-    <button class="modal__linked-head">Похожие фильмы</button>
-    <ul class='modal__linked-films hidden'>${linkedFilmString}</ul>`
+    `
     
 }
 
@@ -364,13 +378,61 @@ async function showFilms() {
     
 }
 
+let topShowsArr = [];
+let topShowsString = '';
+let allPagesPopularShows = 1;
+
+async function showTopShows() {
+    topShowsEl.innerHTML = '';
+    let start = currentItemPopularShows;
+    currentPagePopularShows = (currentItemPopularShows + 10) / 10;    
+    let end = currentPagePopularShows * countFilmsOnPage;
+    
+
+    console.log(currentPagePopularShows)
+    if(currentPagePopularShows % 2 === 1 && currentPagePopularShows <= allPagesPopularShows){
+        let topShowsArrNewData = await getTopShows();  
+        allPagesPopularShows = topShowsArrNewData.totalPages;
+        for(let film of topShowsArrNewData.items) {
+            topShowsArr.push(film);
+        }
+        
+    }
+    
+    console.log(topShowsArr);
+
+    for(let i = start; i < end; i++) {
+        let show = topShowsArr[i];
+        topShowsString += `<li class="top-shows__item" data-id='${i}'>
+                            <button class="top-shows__film-more">
+                                <div class="top-shows__wrapper">
+                                    <img class="top-shows__image" src=${show.posterUrlPreview}>
+                                    <div class="top-shows__hover">
+                                        <div class="top-shows__raiting">${show.ratingKinopoisk}</div>
+                                        <div class="top-shows__countries">${show.countries.map(c=>c.country).join(', ')}</div>
+                                        <div class="top-shows__genres">${show.genres.map(g=>g.genre).join(', ')}</div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="top-shows__text">${show.nameRu}</div>
+                                <div class="top-shows__date">${show.year}</div>
+                                
+                                
+                            </button>
+                          </li>`;
+
+
+        currentItemPopularShows++;
+    }
+    topShowsEl.innerHTML += topShowsString;
+    
+}
+
 //------точка входа
 
 // выводим кинопремьеры текущего месяца
-
-
-
-
 currentYear= new Date().getFullYear();
 currentMonth = new Date().getMonth();
 currentMonthText = month[currentMonth].toUpperCase();
@@ -379,6 +441,30 @@ yearEl.textContent = new Date().getFullYear()
 monthEl.textContent = monthRu[currentMonth];
 showFilms();
 
+// выводим список топ сериалов
+showTopShows();
+
+// подробнее о сериале 
+topShowsListEl.addEventListener('click', (event) => {
+    console.log(event.target.closest('[data-id]').dataset.id)
+    const currentIdShow = event.target.closest('[data-id]').dataset.id;
+    console.log(topShowsArr[currentIdShow].nameRu);
+    const currentFilm = topShowsArr[currentIdShow];
+
+    modalEl.classList.remove('hidden')
+    paintModalWindow(currentFilm, currentFilm, "", currentFilm.year, undefined);
+    // клик по крестику на модальном окне , закрываем его
+    modalEl.addEventListener('click', (event) => {        
+        if(event.target.dataset.close) modalEl.classList.add('hidden');
+    })
+
+})
+
+topShowsMoreEL.addEventListener('click', ()=>{
+    showTopShows();
+})
+
+// обрабатываем ввод месяца и года
 inputEl.addEventListener('change', async (event) => {
         // назначаем переменные полученные в инпуте
         currentPage = 1;
@@ -397,40 +483,9 @@ inputEl.addEventListener('change', async (event) => {
     })
 
 
-async function showTopShows() {
-    const topShowsArr = await getTopShows();
-    console.log(topShowsArr.items[0].nameRu)
-    console.log(topShowsEl)
-    let topShowsString = '';
-    topShowsEl.textContent = 'FFF'
-    topShowsEl.innerHTML = topShowsArr.items.map(show => {
-        topShowsString = `<li class="top-shows__item">
-                            <img class="top-shows__image" src=${show.posterUrlPreview}>
-                            <p class="top-shows__text">${show.nameRu}</p>
-                          </li>`;
-                          
-                //           `<li class="app__list-item" data-id='${i}'>
-                //     <article class="app__card movie-card">
-                //         <button class="movie-card__link">
-                //             <div class="movie-card__image-wrapper">
-                //                 <img src=${film.posterUrlPreview} alt="#" loading="lazy" class="movie-card__image">
-                //                 <div class="movie-card__hover">
-                //                     <div class="movie-card__rating">${film.countries.map(item=>item.country).join(', ')}</div>
-                //                     <div class="movie-card__genres">${film.genres.map(item =>item.genre).join(', ')}</div>
-                //                     <div class="movie-card__duration ${!film.duration ? 'movie-card__duration--hidden' : ''}">${duration} </div>
-                //                 </div>
-                //             </div>
-                //             <h2 class="movie-card__title">${film.nameRu}</h2>
-                //             <div class="movie-card__date">${date}</div>
-                //         </button>
-                //     </article>
-                // </li>`
-        return topShowsString                            
-    }).join('');
-    console.log(topShowsString)
-}
 
-showTopShows();
+
+
 
 
 
