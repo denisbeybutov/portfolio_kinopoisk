@@ -1,3 +1,14 @@
+// что сделать
+// бургер меню с разделами
+// еще один раздел с фильмами
+// трейлеры попробоватьс tmdb
+// похожие сериалы кнопка в модалке
+// похожие фильмы чтобы открывались в новом модальном окне
+// поиск по ключевым словам 
+// поле ввода месяца кастомное 
+// видео подложка хэдэр
+
+
 // перменные
 // для взятия данных с сервера
 const server = true;
@@ -11,6 +22,7 @@ const monthRu = ['Январь', 'Февраль', 'Март','Апрель','М
 const monthRuDeclen = ['Января', 'Февраля', 'Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября', 'Декабря'];
 
 const API_KEY = 'd4a30300-492f-4d57-b38e-195b3ffe0e04';
+// let currentYearApp = new Date().getFullYear();
 let currentYear; //= new Date().getFullYear();
 let currentMonth; //= new Date().getMonth();
 let currentMonthText;// = month[currentMonth].toUpperCase();
@@ -32,6 +44,9 @@ const inputEl = document.getElementById('input');
 const topShowsEl = document.querySelector('.top-shows__list');
 const topShowsMoreEL = document.querySelector('.top-shows__more');
 const topShowsListEl = document.querySelector('.top-shows__list');
+const appYearListEl = document.querySelector('.app__year-list');
+const monthButtonEl = document.getElementById('month');
+const yearButtonEl = document.getElementById('year');
 
 let currentPaginationHandler = null;
 let currentModalHandler = null;
@@ -98,10 +113,7 @@ function getNumberWithSpaces(num) {
         
         
     }
-    // console.log(currentPage)
-    // paginationsEl.forEach(el => {
-    //     el.querySelector(`[data-id="${currentPage}"]`).classList.add('app__pagination-link--current');
-    // })
+
 }
 
  function showResults(pages, listOfFilms){
@@ -251,7 +263,7 @@ async function getTopShows() {
         dataOfFilm = await response.json()
     }
 
-        console.log(dataOfFilm)
+        // console.log(dataOfFilm)
         return dataOfFilm;
 
                        
@@ -389,7 +401,7 @@ async function showTopShows() {
     let end = currentPagePopularShows * countFilmsOnPage;
     
 
-    console.log(currentPagePopularShows)
+    // console.log(currentPagePopularShows)
     if(currentPagePopularShows % 2 === 1 && currentPagePopularShows <= allPagesPopularShows){
         let topShowsArrNewData = await getTopShows();  
         allPagesPopularShows = topShowsArrNewData.totalPages;
@@ -399,7 +411,7 @@ async function showTopShows() {
         
     }
     
-    console.log(topShowsArr);
+    // console.log(topShowsArr);
 
     for(let i = start; i < end; i++) {
         let show = topShowsArr[i];
@@ -431,6 +443,8 @@ async function showTopShows() {
 }
 
 //------точка входа
+
+
 
 // выводим кинопремьеры текущего месяца
 currentYear= new Date().getFullYear();
@@ -464,28 +478,58 @@ topShowsMoreEL.addEventListener('click', ()=>{
     showTopShows();
 })
 
-// обрабатываем ввод месяца и года
-inputEl.addEventListener('change', async (event) => {
-        // назначаем переменные полученные в инпуте
+
+
+
+
+
+
+
+for(let i = new Date().getFullYear(); i >= 1992; i--) {
+    appYearListEl.innerHTML += `<li class="app__year-item" data-year-id='${i}'>${i}</li>`;
+}
+
+monthButtonEl.addEventListener('click',async (event)=> {
+    // console.log(event.target)
+    if(event.target === monthButtonEl || event.target.dataset.id === "month") {
+        monthButtonEl.lastElementChild.classList.toggle('hidden');
+    }
+    else {
+        console.log(event.target.dataset.monthId)
+        const currentMonthHere = event.target.textContent;
+        monthButtonEl.lastElementChild.classList.add('hidden');
+        
         currentPage = 1;
-        yearEl.textContent = event.target.value.slice(0,4);
-        monthEl.textContent = monthRu[event.target.value.slice(5,7)-1];
-        currentMonth = event.target.value.slice(5,7)-1;
-        currentYear = event.target.value.slice(0,4);
-        currentMonthText = month[event.target.value.slice(5,7)-1].toUpperCase();
-        currentMonthRu = monthRu[currentMonth];
-
-        // запускаем показ фильмов с введенными данными
+        monthEl.textContent = currentMonthHere;
+        currentMonth = currentMonthHere;
+        currentMonthText = month[event.target.dataset.monthId].toUpperCase();
+        currentMonthRu = monthRu[event.target.dataset.monthId];
+        
+        //запускаем показ фильмов с введенными данными
         await showFilms();
+    }
 
-        
-        
-    })
+    
+    
+})
 
+yearButtonEl.addEventListener('click', async(event)=>{
 
+    if(event.target === yearButtonEl || event.target.dataset.id === 'year') {
+        yearButtonEl.lastElementChild.classList.toggle('hidden');
+    }
+    else {
+        const currentYearHere = event.target.textContent;
+        yearButtonEl.lastElementChild.classList.add('hidden');
 
+        currentPage = 1;
+        yearEl.textContent = currentYearHere;
+        currentYear = currentYearHere;
 
-
+        //запускаем показ фильмов с введенными данными
+        await showFilms();
+    }
+})
 
 
 

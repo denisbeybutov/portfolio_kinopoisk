@@ -69,11 +69,93 @@ img{
 }
 
 .app__title {
-    margin: 0;
-    padding: 10px 0 0 0;
+    
+    padding: 20px 0 20px 0;
     font-size: 24px;
     color: var(--accent-color);
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.app__title-button {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    width: 145px;
+    padding: 5px 15px 5px 20px;
+    cursor: pointer;
+    font-family: 'Gerbera Medium';
+    font-size: 18px;
+    position: relative;
+}
+
+.app__title-button:hover {
+    background-color: #ad6529;
+}
+
+.app__month-list{
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    left: 0px;
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 20px;
+    width: 100%;
+    padding: 7px 0;
+    overflow: hidden;
+}
+
+.app__month-item {
+    padding: 2px 0;
+    transition: background .3s;
+}
+
+.app__month-item:hover{
+    background-color: #ad6529;
+}
+
+.app__year-list{
+    height: 410px;
+    color: var(--text-color);
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    left: 0px;
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 20px;
+    width: 100%;
+    padding: 7px 0;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.app__year-item{
+    padding: 2px 0;
+    transition: background .3s;
+}
+
+.app__year-item:hover{
+    background-color: #ad6529;
+}
+
+
+.app__title-img{
+    width: 10px;
 }
 
 .app__pagination {

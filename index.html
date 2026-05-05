@@ -10,16 +10,38 @@
     <div class="app">
         <div class="container app__container">
 
-            <p class="app__title">
-                Кинопремьеры 
-                <span class="month"></span>
-                <span class="year"></span>
-            </p>
+            <div class="app__title">
+                <p>Кинопремьеры </p>
+                <button class="app__title-button" id="month">
+                    <p class="month" data-id="month"></p>
+                    <img class="app__title-img" src="./icons/arrow-bottom.svg" alt="" data-id="month">
+                    <ul class="app__month-list hidden">
+                        <div class="li app__month-item" data-month-id="0">Январь</div>
+                        <div class="li app__month-item" data-month-id="1">Феварль</div>
+                        <div class="li app__month-item" data-month-id="2">Март</div>
+                        <div class="li app__month-item" data-month-id="3">Апрель</div>
+                        <div class="li app__month-item" data-month-id="4">Май</div>
+                        <div class="li app__month-item" data-month-id="5">Июнь</div>
+                        <div class="li app__month-item" data-month-id="6">Июль</div>
+                        <div class="li app__month-item" data-month-id="7">Август</div>
+                        <div class="li app__month-item" data-month-id="8">Сентябрь</div>
+                        <div class="li app__month-item" data-month-id="9">Октябрь</div>
+                        <div class="li app__month-item" data-month-id="10">Ноябрь</div>
+                        <div class="li app__month-item" data-month-id="11">Декабрь</div>
+                    </ul>
+                </button>
+                
+                <button class="app__title-button" id="year">
+                    <p class="year" data-id="year"></p>
+                    <img class="app__title-img" src="./icons/arrow-bottom.svg" alt="" data-id="year">
+                    <ul class="app__year-list hidden"></ul>
+                </button>
+            </div>
 
-            <div class="input">
+            <!-- <div class="input">
                 
                 <input class="input__inp" id="input" type="month">
-            </div>
+            </div> -->
 
             
             <ul class="list-reset app__list"></ul>            
@@ -40,3 +62,4 @@
     <script src="./script.js"></script>
 </body>
 </html>
+
