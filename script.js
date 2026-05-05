@@ -31,6 +31,8 @@ const countFilmsOnPage = 10;
 let currentPage = 1;
 let currentItemPopularShows = 0;
 let currentPagePopularShows = 1;
+let currentItemPopularMovies = 0;
+let currentPagePopularMovies = 1;
 
 // переменные для элементов страницы
 const appListEl = document.querySelector('.app__list');
@@ -47,6 +49,12 @@ const topShowsListEl = document.querySelector('.top-shows__list');
 const appYearListEl = document.querySelector('.app__year-list');
 const monthButtonEl = document.getElementById('month');
 const yearButtonEl = document.getElementById('year');
+
+const topMoviesEl = document.querySelector('.top-movies__list');
+const topMoviesMoreEL = document.querySelector('.top-movies__more');
+const topMoviesListEl = document.querySelector('.top-movies__list');
+
+const menuButton = document.querySelector('.menu__button');
 
 let currentPaginationHandler = null;
 let currentModalHandler = null;
@@ -268,6 +276,31 @@ async function getTopShows() {
 
                        
 }
+// загруажем данные - топ 250 фильмов
+async function getTopMovies() {    
+
+    let dataOfFilm;  
+    if(server3){
+        console.log('server')
+        const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_250_MOVIES&page=${currentPagePopularMovies}`, {
+            method: 'GET',
+            headers: {
+                'X-API-KEY': 'd4a30300-492f-4d57-b38e-195b3ffe0e04',
+                'Content-Type': 'application/json',
+            }
+        })        
+         dataOfFilm = await response.json();
+    } else {
+        console.log('local file')
+        const response = await fetch('./dateOfMonth/response_top-shows.json')
+        dataOfFilm = await response.json()
+    }
+
+        // console.log(dataOfFilm)
+        return dataOfFilm;
+
+                       
+}
 
 // https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_250_TV_SHOWS&page=1
 
@@ -390,6 +423,7 @@ async function showFilms() {
     
 }
 
+// shows
 let topShowsArr = [];
 let topShowsString = '';
 let allPagesPopularShows = 1;
@@ -397,7 +431,7 @@ let allPagesPopularShows = 1;
 async function showTopShows() {
     topShowsEl.innerHTML = '';
     let start = currentItemPopularShows;
-    currentPagePopularShows = (currentItemPopularShows + 10) / 10;    
+    currentPagePopularShows = (currentItemPopularShows + countFilmsOnPage) / countFilmsOnPage;    
     let end = currentPagePopularShows * countFilmsOnPage;
     
 
@@ -442,6 +476,59 @@ async function showTopShows() {
     
 }
 
+//movies
+let topMoviesArr = [];
+let topMoviesString = '';
+let allPagesPopularMovies = 1;
+
+async function showTopMovies() {
+    topMoviesEl.innerHTML = '';
+    let start = currentItemPopularMovies;
+    currentPagePopularMovies = (currentItemPopularMovies + countFilmsOnPage) / countFilmsOnPage;    
+    let end = currentPagePopularMovies * countFilmsOnPage;
+    
+
+    // console.log(currentPagePopularShows)
+    if(currentPagePopularMovies % 2 === 1 && currentPagePopularMovies <= allPagesPopularMovies){
+        let topMoviesArrNewData = await getTopMovies();  
+        allPagesPopularMovies = topMoviesArrNewData.totalPages;
+        for(let film of topMoviesArrNewData.items) {
+            topMoviesArr.push(film);
+        }
+        
+    }
+    
+    // console.log(topMoviesArr);
+
+    for(let i = start; i < end; i++) {
+        let show = topMoviesArr[i];
+        topMoviesString += `<li class="top-movies__item" data-id='${i}'>
+                            <button class="top-movies__film-more">
+                                <div class="top-movies__wrapper">
+                                    <img class="top-movies__image" src=${show.posterUrlPreview}>
+                                    <div class="top-movies__hover">
+                                        <div class="top-movies__raiting">${show.ratingKinopoisk}</div>
+                                        <div class="top-movies__countries">${show.countries.map(c=>c.country).join(', ')}</div>
+                                        <div class="top-movies__genres">${show.genres.map(g=>g.genre).join(', ')}</div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="top-movies__text">${show.nameRu}</div>
+                                <div class="top-movies__date">${show.year}</div>
+                                
+                                
+                            </button>
+                          </li>`;
+
+
+        currentItemPopularMovies++;
+    }
+    topMoviesEl.innerHTML += topMoviesString;
+    
+}
+
 //------точка входа
 
 
@@ -454,6 +541,7 @@ currentMonthRu = monthRu[currentMonth];
 yearEl.textContent = new Date().getFullYear()
 monthEl.textContent = monthRu[currentMonth];
 showFilms();
+
 
 // выводим список топ сериалов
 showTopShows();
@@ -476,6 +564,30 @@ topShowsListEl.addEventListener('click', (event) => {
 
 topShowsMoreEL.addEventListener('click', ()=>{
     showTopShows();
+})
+
+
+// выводим список топ фильмов
+showTopMovies();
+
+// подробнее о сериале 
+topMoviesListEl.addEventListener('click', (event) => {
+    console.log(event.target.closest('[data-id]').dataset.id)
+    const currentIdMovie = event.target.closest('[data-id]').dataset.id;
+    console.log(topMoviesArr[currentIdMovie].nameRu);
+    const currentFilm = topMoviesArr[currentIdMovie];
+
+    modalEl.classList.remove('hidden')
+    paintModalWindow(currentFilm, currentFilm, "", currentFilm.year, undefined);
+    // клик по крестику на модальном окне , закрываем его
+    modalEl.addEventListener('click', (event) => {        
+        if(event.target.dataset.close) modalEl.classList.add('hidden');
+    })
+
+})
+
+topMoviesMoreEL.addEventListener('click', ()=>{
+    showTopMovies();
 })
 
 
@@ -532,7 +644,12 @@ yearButtonEl.addEventListener('click', async(event)=>{
 })
 
 
-
+menuButton.addEventListener('click', (event)=>{
+    console.log(event.target.dataset.id )
+    if(event.target.dataset.id === 'menu-button') {
+        
+    }
+})
 
 
 

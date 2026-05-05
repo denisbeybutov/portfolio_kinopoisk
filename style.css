@@ -64,13 +64,56 @@ img{
     
 }   
 
+
+
 .app {
     padding: 0;
 }
 
+.menu {
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+}
+
+.menu__button {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    color: var(--text-color);
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 10px;
+    font-family: 'Gerbera Medium';
+    font-size: 16px;
+}
+
+.menu__button:hover{
+    background-color: #ad6529;
+}
+
+.menu__item {
+    padding: 3px 10px;
+}
+
+.menu__item:hover{
+    background-color: #ad6529;
+    cursor: pointer;
+}
+
+.menu-img{
+    width: 10px;
+}
+
 .app__title {
     
-    padding: 20px 0 20px 0;
+    padding: 50px 0 20px 0;
     font-size: 24px;
     color: var(--accent-color);
     /* text-align: center; */
@@ -402,6 +445,149 @@ img{
     text-align: start;
 }
 
+
+.top-movies{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.top-movies__header {
+    color: var(--accent-color);
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+.top-movies__list{
+    
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        column-gap: 20px;
+        row-gap: 10px;
+    
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* gap: 15px; */
+    /* justify-content: center; */
+    padding: 20px 0;
+    width: 100%;
+}
+
+.top-movies__item {
+    height: auto;
+    width: auto;
+    
+}
+
+.top-movies__image {
+    height: 300px;
+    width: 100%;
+    transition: scale .3s;
+    object-fit: cover;
+}
+
+.top-movies__image:hover{
+    scale: 1.05;
+}
+
+.top-movies__text {
+    color: var(--text-color);
+}
+
+.top-movies__more {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    transition: background-color .3s;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-family: "Gerbera Medium";
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-movies__more:hover {
+    background-color: #ad6529;
+}
+
+.top-movies__film-more {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: "Gerbera Medium";
+    color: var(--text-color);
+    overflow: hidden;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.top-movies__wrapper{
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+
+.top-movies__hover{
+    position: absolute;
+    inset: 0;
+    background-color: rgb(0, 0, 0,.7);
+    opacity: 0;
+    transition: opacity .3s;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: start;
+    height: 300px;
+}
+
+.top-movies__hover:hover{
+    opacity: 1;
+}
+
+
+
+
+.top-movies__raiting{
+    flex-grow: 1;
+    color: var(--accent-color);
+    font-size: 18px;
+    
+    
+}
+
+.top-movies__countries{
+    color: var(--accent-color);
+    font-size:18px;
+}
+
+.top-movies__genres {
+    color: var(--second-text-color);
+}
+
+.top-movies__text{
+    font-size: 20px;
+    text-align: start;
+}
+
+.top-movies__date{
+    font-size: 13px;
+    color: var(--second-text-color);
+    text-align: start;
+}
+
+
+
+
+
+
 .modal {
     position: fixed;
     inset: 0;    
@@ -566,6 +752,9 @@ img{
     .top-shows__list {
         grid-template-columns: repeat(4,1fr);
     }
+    .top-movies__list {
+        grid-template-columns: repeat(4,1fr);
+    }
 }
 @media (max-width: 850px) {
     .app__list {
@@ -579,6 +768,9 @@ img{
     }
 
     .top-shows__list {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .top-movies__list {
         grid-template-columns: repeat(2,1fr);
     }
 
@@ -623,6 +815,28 @@ img{
     }
 
     .top-shows__raiting{
+        flex-grow: 0;
+    }
+    .top-movies__hover{
+        
+        
+        
+        opacity: 1;
+        transition: opacity .3s;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        text-align: start;
+        top: 80%;
+        /* bottom: 10%; */
+        height: 20%;
+        justify-content: end;
+        box-shadow: 0px 0px 26px 30px rgba(0, 0, 0, 0.7);
+        clip-path: inset(-74px -5.7% -15.7% -5.7%);
+        
+    }
+
+    .top-movies__raiting{
         flex-grow: 0;
     }
 

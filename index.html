@@ -10,6 +10,20 @@
     <div class="app">
         <div class="container app__container">
 
+            <div class="menu">
+                
+                <button class="menu__button" data-id="menu-button">
+                    
+                    <p class="menu__header" data-id="menu-button">Меню</p>
+                    <img class="menu-img" src="./icons/arrow-bottom.svg" alt="" data-id="menu-button">
+                </button>
+                <ul class="memu__list hidden">
+                    <li class="menu__item">Кинопремьеры</li>
+                    <li class="menu__item">Популярные сериалы</li>
+                    <li class="menu__item">Популярные фильмы</li>
+                </ul>
+            </div>
+
             <div class="app__title">
                 <p>Кинопремьеры </p>
                 <button class="app__title-button" id="month">
@@ -38,10 +52,7 @@
                 </button>
             </div>
 
-            <!-- <div class="input">
-                
-                <input class="input__inp" id="input" type="month">
-            </div> -->
+            
 
             
             <ul class="list-reset app__list"></ul>            
@@ -51,6 +62,12 @@
                 <p class="top-shows__header">Популярные сериалы</p>
                 <ul class="top-shows__list"></ul>
                 <button class="top-shows__more">Показать еще</button>
+            </div>
+
+            <div class="top-movies">
+                <p class="top-movies__header">Популярные фильмы</p>
+                <ul class="top-movies__list"></ul>
+                <button class="top-movies__more">Показать еще</button>
             </div>
             
 
