@@ -1,12 +1,12 @@
 // что сделать
-// бургер меню с разделами
-// еще один раздел с фильмами
-// трейлеры попробоватьс tmdb
+// бургер меню с разделами +
+// еще один раздел с фильмами +
+// трейлеры попробоватьс tmdb 
 // похожие сериалы кнопка в модалке
-// похожие фильмы чтобы открывались в новом модальном окне
+// похожие фильмы чтобы открывались в новом модальном окне 
 // поиск по ключевым словам 
-// поле ввода месяца кастомное 
-// видео подложка хэдэр
+// поле ввода месяца кастомное +
+// видео подложка хэдэр 
 
 
 // перменные
@@ -55,6 +55,8 @@ const topMoviesMoreEL = document.querySelector('.top-movies__more');
 const topMoviesListEl = document.querySelector('.top-movies__list');
 
 const menuButton = document.querySelector('.menu__button');
+const inputKey = document.querySelector('.input-key');
+const searchList = document.querySelector('.search__list')
 
 let currentPaginationHandler = null;
 let currentModalHandler = null;
@@ -283,6 +285,32 @@ async function getTopMovies() {
     if(server3){
         console.log('server')
         const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_250_MOVIES&page=${currentPagePopularMovies}`, {
+            method: 'GET',
+            headers: {
+                'X-API-KEY': 'd4a30300-492f-4d57-b38e-195b3ffe0e04',
+                'Content-Type': 'application/json',
+            }
+        })        
+         dataOfFilm = await response.json();
+    } else {
+        console.log('local file')
+        const response = await fetch('./dateOfMonth/response_top-shows.json')
+        dataOfFilm = await response.json()
+    }
+
+        // console.log(dataOfFilm)
+        return dataOfFilm;
+
+                       
+}
+// загруажем данные - поиск по ключ словам
+async function getFilmsKeys(key) {    
+
+    let dataOfFilm;  
+    const encodedKeyword = encodeURIComponent(key);
+    if(server3){
+        console.log('server')
+        const response = await fetch(`https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=${encodedKeyword}&page=1`, {
             method: 'GET',
             headers: {
                 'X-API-KEY': 'd4a30300-492f-4d57-b38e-195b3ffe0e04',
@@ -647,11 +675,63 @@ yearButtonEl.addEventListener('click', async(event)=>{
 menuButton.addEventListener('click', (event)=>{
     console.log(event.target.dataset.id )
     if(event.target.dataset.id === 'menu-button') {
-        
+        document.querySelector('.memu__list').classList.toggle('hidden');
+    }
+    
+})
+
+document.addEventListener('click', (event)=>{
+    if(event.target.dataset.id !== 'menu-button') {
+        document.querySelector('.memu__list').classList.add('hidden');
     }
 })
 
 
+inputKey.addEventListener('change', async (event) => {
+    document.querySelector('.search__list').innerHTML = 'Загрузка поиска'
+    console.log(event.target.value);
+    const inputValue = event.target.value;
+    const data = await getFilmsKeys(inputValue);
+    console.log(data)
 
+    document.querySelector('.search__list').innerHTML = '';
+    for(let i = 0; i < countFilmsOnPage; i++) {
+        const film = data.films[i];
+        document.querySelector('.search__list').innerHTML += `<li class="search__item" data-id=${i}>
+                            <button class="search__film-more">
+                                <div class="search__wrapper">
+                                    <img class="search__image" src=${film.posterUrlPreview}>
+                                    <div class="search__hover">
+                                        <div class="search__raiting">${film.rating}</div>
+                                        <div class="search__countries">${film.countries.map(c=>c.country).join(', ')}</div>
+                                        <div class="search__genres">${film.genres.map(g=>g.genre).join(', ')}</div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="search__text">${film.nameRu}</div>
+                                <div class="search__date">${film.year}</div>
+                                
+                                
+                            </button>
+                          </li>`
+    }
+    
+    // подробнее о фильме 
+    searchList.addEventListener('click', (event) => {
+        console.log(event.target.closest('[data-id]').dataset.id)
+        const currentIdMovie = event.target.closest('[data-id]').dataset.id;
+        console.log(data.films[currentIdMovie].nameRu);
+        const currentFilm = data.films[currentIdMovie];
 
+        modalEl.classList.remove('hidden')
+        paintModalWindow(currentFilm, currentFilm, "", currentFilm.year, undefined);
+        // клик по крестику на модальном окне , закрываем его
+        modalEl.addEventListener('click', (event) => {        
+            if(event.target.dataset.close) modalEl.classList.add('hidden');
+        })
 
+    })
+
+})

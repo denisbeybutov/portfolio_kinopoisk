@@ -18,14 +18,22 @@
                     <img class="menu-img" src="./icons/arrow-bottom.svg" alt="" data-id="menu-button">
                 </button>
                 <ul class="memu__list hidden">
-                    <li class="menu__item">Кинопремьеры</li>
-                    <li class="menu__item">Популярные сериалы</li>
-                    <li class="menu__item">Популярные фильмы</li>
+                    <li class="menu__item"><a class="menu__links" href="#search">Поиск</a></li>
+                    <li class="menu__item"><a class="menu__links" href="#film-premiers">Кинопремьеры</a></li>
+                    <li class="menu__item"><a class="menu__links" href="#top-shows">Популярные сериалы</a></li>
+                    <li class="menu__item"><a class="menu__links" href="#top-movies">Популярные фильмы</a></li>
                 </ul>
             </div>
 
+            <input class="input-key" type="text" placeholder="Поиск по фильмам и сериалам">
+
+            <ul class="search__list" id="search">
+                
+            </ul>
+            
+
             <div class="app__title">
-                <p>Кинопремьеры </p>
+                <p id="film-premiers">Кинопремьеры </p>
                 <button class="app__title-button" id="month">
                     <p class="month" data-id="month"></p>
                     <img class="app__title-img" src="./icons/arrow-bottom.svg" alt="" data-id="month">
@@ -59,13 +67,13 @@
             <ul class="list-reset app__pagination"></ul>
 
             <div class="top-shows">
-                <p class="top-shows__header">Популярные сериалы</p>
+                <p class="top-shows__header" id="top-shows">Популярные сериалы</p>
                 <ul class="top-shows__list"></ul>
                 <button class="top-shows__more">Показать еще</button>
             </div>
 
             <div class="top-movies">
-                <p class="top-movies__header">Популярные фильмы</p>
+                <p class="top-movies__header" id="top-movies">Популярные фильмы</p>
                 <ul class="top-movies__list"></ul>
                 <button class="top-movies__more">Показать еще</button>
             </div>
