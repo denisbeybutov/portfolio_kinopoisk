@@ -18,7 +18,7 @@
     --second-text-color: #a5a5b1;
     --third-text-color: #cdcdcd;
     --error-color: #ea003d;
-    --var: #000;
+    
 }
 
 * {
@@ -152,7 +152,7 @@ img{
 /* flex-wrap: wrap; */
 /* gap: 15px; */
 /* justify-content: center; */
-padding: 50px 0 40px;
+padding: 50px 0 0px;
 width: 100%;
 }
 
@@ -1047,6 +1047,10 @@ text-align: start;
         font-size: 23px;
         opacity: .6;
         top: 14px;
+    }
+
+    .modal{
+        padding: 20px 5%;
     }
     
 }

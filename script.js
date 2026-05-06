@@ -335,6 +335,7 @@ async function getFilmsKeys(key) {
 
 
 function paintModalWindow(currentFilm, dataOfFilm, budgetString,date, linkedFilms) {
+    menuButton.classList.add('hidden')
     let linkedFilmString;
     if(linkedFilms){
         linkedFilmString = linkedFilms.items.map(film => {
@@ -375,6 +376,7 @@ function paintModalWindow(currentFilm, dataOfFilm, budgetString,date, linkedFilm
 //показываем модальное окно по клику
 function showModalWindow(data,listOfFilms){
         return async (event) => {
+            menuButton.classList.add('hidden')
             modalEl.innerHTML = 'Загрузка...'
             const currentFilmId = event.target.closest('[data-id]').dataset.id;
             const currentFilm = data.items[currentFilmId]; 
@@ -446,6 +448,7 @@ async function showFilms() {
     // клик по крестику на модальном окне , закрываем его
     modalEl.addEventListener('click', (event) => {        
         if(event.target.dataset.close) modalEl.classList.add('hidden');
+        menuButton.classList.remove('hidden')
     })
 
     
@@ -582,10 +585,12 @@ topShowsListEl.addEventListener('click', (event) => {
     const currentFilm = topShowsArr[currentIdShow];
 
     modalEl.classList.remove('hidden')
+    menuButton.classList.add('hidden')
     paintModalWindow(currentFilm, currentFilm, "", currentFilm.year, undefined);
     // клик по крестику на модальном окне , закрываем его
     modalEl.addEventListener('click', (event) => {        
         if(event.target.dataset.close) modalEl.classList.add('hidden');
+        menuButton.classList.remove('hidden')
     })
 
 })
@@ -606,10 +611,12 @@ topMoviesListEl.addEventListener('click', (event) => {
     const currentFilm = topMoviesArr[currentIdMovie];
 
     modalEl.classList.remove('hidden')
+    menuButton.classList.add('hidden')
     paintModalWindow(currentFilm, currentFilm, "", currentFilm.year, undefined);
     // клик по крестику на модальном окне , закрываем его
     modalEl.addEventListener('click', (event) => {        
         if(event.target.dataset.close) modalEl.classList.add('hidden');
+        menuButton.classList.remove('hidden')
     })
 
 })
@@ -726,14 +733,15 @@ inputKey.addEventListener('change', async (event) => {
         const currentFilm = data.films[currentIdMovie];
 
         modalEl.classList.remove('hidden')
+        menuButton.classList.add('hidden')
         paintModalWindow(currentFilm, currentFilm, "", currentFilm.year, undefined);
         // клик по крестику на модальном окне , закрываем его
         modalEl.addEventListener('click', (event) => {        
             if(event.target.dataset.close) modalEl.classList.add('hidden');
+            menuButton.classList.remove('hidden')
         })
 
     })
 
 })
 
-let hello
